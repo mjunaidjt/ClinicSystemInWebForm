@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ClinicSystemInWebForm.AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        form{
+            margin:0;
+            padding:0;
+        }
+        .sidebar{
+            height:768px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="AdminMaster" runat="server">
+  
+            <div class="container-fluid custom-container">
+            <div class="row">
+               
+                <%--sidebar-navigation + content--%> 
+                <div class="col-md-3 col-xs-12 sidebar ml-0 ">
+                    <nav class="navbar bg-dark navbar-dark navbar-expand-xs">
+                       <ul class="navbar-nav sidebar">
+                           <li class="customnav-item nav-item">
+                                <asp:HyperLink ID="HyperLinkLogo" runat="server" CssClass="nav-brand customnav-brand" NavigateUrl="#">Cc</asp:HyperLink>
+                           </li>
+                           <li class="customnav-item nav-item">
+                                <asp:HyperLink ID="HyperLinkProfileInfo" runat="server" CssClass="customnav-link nav-link">
+                                        <i class="fa fa-user-circle-o"></i>
+                                    <p>Welcome!</p>
+                                       <asp:ContentPlaceHolder ID="profileInfoHolder" runat="server">
+                                       </asp:ContentPlaceHolder>
+                                 </asp:HyperLink>
+                           </li>
+
+                           <li class="customnav-item nav-item" >
+                               <asp:HyperLink ID="HyperLinkDashboard" runat="server" CssClass="customnav-link nav-link " NavigateUrl="#"><i class="fa fa-home"></i>  Dashboard</asp:HyperLink>                              
+                           </li>
+                           <li class="customnav-item nav-item">
+                               <asp:HyperLink ID="HyperLinkPatient" runat="server" CssClass="customnav-link nav-link"><i class="fa fa-pencil-square-o"></i>  Patient</asp:HyperLink>
+                           </li>
+                           <li class="customnav-item nav-item">
+                               <asp:HyperLink ID="HyperLinkAppointment" runat="server" CssClass="customnav-link nav-link"><i class="fa fa-pencil-square-o"></i>  Appointment</asp:HyperLink>
+                           </li>
+                           <li class="customnav-item nav-item">
+                               <asp:HyperLink ID="HyperLinkDoctors" runat="server" CssClass="customnav-link nav-link"><i class="fa fa-pencil-square-o"></i>  Doctors</asp:HyperLink>
+                           </li>
+                           <li class="customnav-item nav-item">
+                               <asp:HyperLink ID="HyperLinkUsers" runat="server" CssClass=" customnav-link nav-link"><i class="fa fa-pencil-square-o"></i>  Users</asp:HyperLink>
+                           </li>
+                           <li class="customnav-item nav-item">
+                               <asp:HyperLink ID="HyperLinkReports" runat="server" CssClass="customnav-link nav-link"><i class="fa fa-bar-chart"></i>  Reports</asp:HyperLink>
+                           </li>
+                       </ul>
+                    </nav>
+                </div>
+                <div class="col-md-9 col-xs-12">
+<%--                   header 
+                           <nav class="navbar navbar-light navbar-expand-sm">
+                              <ul class="navbar-nav">
+
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseSidebar">
+                                  <span class="navbar-toggler-icon"></span>
+                           </button>
+
+                                <li class="nav-item">
+                                   <a href="#" class="nav-link"><i class="fa fa-user"></i></a>
+                                </li>
+                                <li  class="nav-item jsutify-content-left"">
+                                    <a href="#"  class="nav-link">Test User</a>
+                                </li>
+                             </ul>
+                           </nav>--%>
+                 
+                    <%--webpage holder--%>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        
+                    </asp:ContentPlaceHolder>
+
+                    <div class="footer">
+
+                    </div>
+
+                    </div>
+               </div>
+            </div>
+    </form>
+</body>
+</html>
