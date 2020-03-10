@@ -5,6 +5,10 @@
     {
       "library": "twitter-bootstrap@4.4.1",
       "destination": "lib/bootstrap/"
+    },
+    {
+      "library": "font-awesome@5.12.1",
+      "destination": "lib/font-awesome/"
     }
   ]
 }
