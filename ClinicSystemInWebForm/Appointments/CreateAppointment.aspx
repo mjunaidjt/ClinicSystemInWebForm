@@ -2,11 +2,13 @@
 <asp:Content ID="AppointmentHead" ContentPlaceHolderID="head" runat="server">
     <title>appointment/create</title>
 </asp:Content>
-<asp:Content ID="AppointmentProfileInfo" ContentPlaceHolderID="profileInfoHolder" runat="server">
+<%--<asp:Content ID="AppointmentProfileInfo" ContentPlaceHolderID="profileInfoHolder" runat="server">
     
-</asp:Content>
+</asp:Content> --%>
 <asp:Content ID="CreateAppointment" ContentPlaceHolderID="MainContent" runat="server">
 
+    <div class="container-fluid">
+    
     <div class="row">
         <div class="col-md-6 col-xs-12">
             <div class="x_panel card">
@@ -108,4 +110,5 @@
 
     </div>
 
+    </div>
 </asp:Content>

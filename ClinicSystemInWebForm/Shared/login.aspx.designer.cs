@@ -7,101 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClinicSystemInWebForm
+namespace ClinicSystemInWebForm.Shared
 {
 
 
-    public partial class AdminMaster
+    public partial class login
     {
 
         /// <summary>
-        /// head control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// HyperLink1 control.
+        /// LoginEmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Label LoginEmailLabel;
 
         /// <summary>
-        /// DashboardLink control.
+        /// LoginEmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DashboardLink;
+        protected global::System.Web.UI.WebControls.TextBox LoginEmailTextBox;
 
         /// <summary>
-        /// PatientLink control.
+        /// LoginPasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PatientLink;
+        protected global::System.Web.UI.WebControls.Label LoginPasswordLabel;
 
         /// <summary>
-        /// AppointmentLink control.
+        /// LoginPasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AppointmentLink;
+        protected global::System.Web.UI.WebControls.TextBox LoginPasswordTextBox;
 
         /// <summary>
-        /// DoctorsLink control.
+        /// LoginCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DoctorsLink;
+        protected global::System.Web.UI.WebControls.CheckBox LoginCheckBox;
 
         /// <summary>
-        /// UserLink control.
+        /// LoginCheckBoxLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink UserLink;
+        protected global::System.Web.UI.WebControls.Label LoginCheckBoxLabel;
 
         /// <summary>
-        /// ReportsLink control.
+        /// loginbutton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ReportsLink;
-
-        /// <summary>
-        /// userprofilehyperlink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink userprofilehyperlink;
-
-        /// <summary>
-        /// MainContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button loginbutton;
     }
 }
