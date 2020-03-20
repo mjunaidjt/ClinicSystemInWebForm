@@ -2,13 +2,9 @@
 <asp:Content ID="AppointmentHead" ContentPlaceHolderID="head" runat="server">
     <title>appointment/create</title>
 </asp:Content>
-<%--<asp:Content ID="AppointmentProfileInfo" ContentPlaceHolderID="profileInfoHolder" runat="server">
-    
-</asp:Content> --%>
+
 <asp:Content ID="CreateAppointment" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="container-fluid">
-    
     <div class="row">
         <div class="col-md-6 col-xs-12">
             <div class="x_panel card">
@@ -75,7 +71,7 @@
                     <div class="form-group">
                            <asp:Label ID="AppointmentDateLabel" runat="server" Text="Date" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                           <asp:TextBox ID="AppointmentDateTextBox" runat="server" CssClass="form-control date"></asp:TextBox>
+                           <asp:TextBox ID="AppointmentDateTextBox" runat="server" CssClass="form-control date" ToolTip="Enter the date of appoinment here">Enter Date</asp:TextBox>
                            <%--<asp:RequiredFieldValidator ID="AppointmentDateValidator" runat="server" ControlToValidate="AppointmentDateTextBox" ErrorMessage="Required"   
                               ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </div>
@@ -84,7 +80,7 @@
                     <div class="form-group">
                         <asp:Label ID="AppointmentTimeLabel" runat="server" Text="Time" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <asp:TextBox ID="AppointmentTimeTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="AppointmentTimeTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Time of Appointment here">Enter time here</asp:TextBox>
                             <%--<asp:RequiredFieldValidator ID="AppointmentTimeValidator" runat="server" ControlToValidate="AppointmentDetailsTextBox" ErrorMessage="Required"   
                                ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </div>
@@ -92,9 +88,9 @@
                     <div class="form-group">
                          <asp:Label ID="AppointmentDetailsLabel" runat="server" Text="Details" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <asp:TextBox ID="AppointmentDetailsTextBox" runat="server" CssClass="form-control"></asp:TextBox>
-                  <%--          <asp:RequiredFieldValidator ID="AppointmentDetails_Validator" runat="server" ControlToValidate="AppointmentDetailsTextBox" ErrorMessage="Required"   
-                               ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                            <asp:TextBox ID="AppointmentDetailsTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Details of Appointment here" >Enter Appoinment Details</asp:TextBox>
+                  <%--          <asp:requiredfieldvalidator id="appointmentdetails_validator" runat="server" controltovalidate="appointmentdetailstextbox" errormessage="required"   
+                               forecolor="red"></asp:requiredfieldvalidator>--%>
                         </div>
                     </div>
                     <div class="ln_solid"></div>
@@ -110,5 +106,5 @@
 
     </div>
 
-    </div>
+
 </asp:Content>

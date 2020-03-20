@@ -7,83 +7,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClinicSystemInWebForm.Shared
+namespace ClinicSystemInWebForm.Attendence
 {
 
 
-    public partial class login
+    public partial class CreateAttendence
     {
 
         /// <summary>
-        /// form1 control.
+        /// RemarksL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label RemarksL;
 
         /// <summary>
-        /// LoginEmailLabel control.
+        /// Remarks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginEmailLabel;
+        protected global::System.Web.UI.WebControls.TextBox Remarks;
 
         /// <summary>
-        /// LoginEmailTextBox control.
+        /// DiagnosisL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginEmailTextBox;
+        protected global::System.Web.UI.WebControls.Label DiagnosisL;
 
         /// <summary>
-        /// LoginPasswordLabel control.
+        /// DiagnosisTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginPasswordLabel;
+        protected global::System.Web.UI.WebControls.TextBox DiagnosisTB;
 
         /// <summary>
-        /// LoginPasswordTextBox control.
+        /// PrescriptionL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginPasswordTextBox;
+        protected global::System.Web.UI.WebControls.Label PrescriptionL;
 
         /// <summary>
-        /// LoginCheckBox control.
+        /// PrescriptionTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox LoginCheckBox;
+        protected global::System.Web.UI.WebControls.TextBox PrescriptionTB;
 
         /// <summary>
-        /// LoginCheckBoxLabel control.
+        /// SaveAttendence control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginCheckBoxLabel;
-
-        /// <summary>
-        /// loginbutton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginbutton;
+        protected global::System.Web.UI.WebControls.Button SaveAttendence;
     }
 }

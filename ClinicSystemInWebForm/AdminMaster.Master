@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Master Page</title>
+    <title>C+ Clinic</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
   
 </head>
@@ -30,11 +31,11 @@
       <div class="list-group list-group-flush">
         
         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-user-circle-o fa-5x"></i></asp:HyperLink>
-        <asp:HyperLink ID="DashboardLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" ><i class="fa fa-home"></i> Dashboard</asp:HyperLink>
-        <asp:HyperLink ID="PatientLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-pencil-square-o"></i> Patient</asp:HyperLink>
-        <asp:HyperLink ID="AppointmentLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-pencil-square-o"></i> Appointment</asp:HyperLink>
-        <asp:HyperLink ID="DoctorsLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-pencil-square-o"></i> Doctors</asp:HyperLink>
-        <asp:HyperLink ID="UserLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-pencil-square-o"></i> Users</asp:HyperLink>
+        <asp:HyperLink ID="DashboardLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" NavigateUrl="~/Home/HomeIndex.aspx" ><i class="fa fa-home"></i> Dashboard</asp:HyperLink>
+        <asp:HyperLink ID="PatientLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" NavigateUrl="~/Patient/PatientIndex.aspx"><i class="fa fa-pencil-square-o"></i> Patient</asp:HyperLink>
+        <asp:HyperLink ID="AppointmentLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" NavigateUrl="~/Appointments/AppointmentIndex.aspx"><i class="fa fa-pencil-square-o"></i> Appointment</asp:HyperLink>
+        <asp:HyperLink ID="DoctorsLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" NavigateUrl="~/Doctor/DoctorIndex.aspx"><i class="fa fa-pencil-square-o"></i> Doctors</asp:HyperLink>
+        <asp:HyperLink ID="UserLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White" NavigateUrl="~/Accounts/AccountIndex.aspx"><i class="fa fa-pencil-square-o"></i> Users</asp:HyperLink>
         <asp:HyperLink ID="ReportsLink" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-bar-chart"></i>Reports</asp:HyperLink>
        
       </div>
@@ -57,7 +58,7 @@
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
+             </li>
             <li class="nav-item">
               <asp:HyperLink ID="userprofilehyperlink" NavigateUrl="#" CssClass="nav-link" runat="server"><i class="fa fa-user fa-lg"></i> Admin </asp:HyperLink>
             <%--  <a class="nav-link" href="#"></a>--%>
@@ -80,6 +81,7 @@
       <div class="container-fluid mt-2">
 
            <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+               This is Dashboard Page
             </asp:ContentPlaceHolder>
       <%--  <h1 class="mt-4">Simple Sidebar</h1> --%>
 
