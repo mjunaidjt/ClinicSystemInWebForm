@@ -11,7 +11,14 @@ namespace ClinicSystemInWebForm
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["useremail"]==null || Session["userpassword"] == null)
+            {
+                
+                Response.Redirect("~/Accounts/login.aspx");
+              
+            }
 
+            userprofilehyperlink.Text = "<i class='fa fa-user fa-lg'> </i> " + Session["useremail"].ToString();
         }
 
         protected void UserDropDownList_SelectedIndexChanged(object sender, EventArgs e)

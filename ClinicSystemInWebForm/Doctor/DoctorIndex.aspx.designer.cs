@@ -15,84 +15,12 @@ namespace ClinicSystemInWebForm.Doctor
     {
 
         /// <summary>
-        /// DoctorTable control.
+        /// DoctorDataGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table DoctorTable;
-
-        /// <summary>
-        /// doctortheaderRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow doctortheaderRow;
-
-        /// <summary>
-        /// AddNewDoctor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton AddNewDoctor;
-
-        /// <summary>
-        /// AppointmentDateRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow AppointmentDateRow;
-
-        /// <summary>
-        /// DrStatusHyperlinkA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DrStatusHyperlinkA;
-
-        /// <summary>
-        /// DrStatusHyperlinkC control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DrStatusHyperlinkC;
-
-        /// <summary>
-        /// DrAccStatusHyperlinkA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DrAccStatusHyperlinkA;
-
-        /// <summary>
-        /// DrAccStatusHyperlinkL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DrAccStatusHyperlinkL;
-
-        /// <summary>
-        /// EditAppointmentLB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton EditAppointmentLB;
+        protected global::System.Web.UI.WebControls.GridView DoctorDataGrid;
     }
 }

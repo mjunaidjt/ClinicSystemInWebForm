@@ -33,6 +33,15 @@ namespace ClinicSystemInWebForm.Doctor
         protected global::System.Web.UI.WebControls.TextBox DoctorNameTB;
 
         /// <summary>
+        /// DoctorNameTBRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DoctorNameTBRFValidator;
+
+        /// <summary>
         /// DoctorSpecializationL control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace ClinicSystemInWebForm.Doctor
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DoctorSpecializationTB;
+
+        /// <summary>
+        /// DrSpecializationRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DrSpecializationRFValidator;
 
         /// <summary>
         /// DoctorPhoneL control.
@@ -69,6 +87,15 @@ namespace ClinicSystemInWebForm.Doctor
         protected global::System.Web.UI.WebControls.TextBox DoctorPhoneTB;
 
         /// <summary>
+        /// DoctorPhoneTBRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DoctorPhoneTBRFValidator;
+
+        /// <summary>
         /// DoctorAddressL control.
         /// </summary>
         /// <remarks>
@@ -87,6 +114,15 @@ namespace ClinicSystemInWebForm.Doctor
         protected global::System.Web.UI.WebControls.TextBox DoctorAdressTB;
 
         /// <summary>
+        /// DoctorAdressTBRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DoctorAdressTBRFValidator;
+
+        /// <summary>
         /// DrStatusL control.
         /// </summary>
         /// <remarks>
@@ -96,40 +132,22 @@ namespace ClinicSystemInWebForm.Doctor
         protected global::System.Web.UI.WebControls.Label DrStatusL;
 
         /// <summary>
-        /// AvailableL control.
+        /// DRStatusR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AvailableL;
+        protected global::System.Web.UI.WebControls.RadioButtonList DRStatusR;
 
         /// <summary>
-        /// RadioAvailable control.
+        /// DrStatusLRFValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioAvailable;
-
-        /// <summary>
-        /// ClosedL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ClosedL;
-
-        /// <summary>
-        /// RadioClosed control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioClosed;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DrStatusLRFValidator;
 
         /// <summary>
         /// DrDetailBackLB control.

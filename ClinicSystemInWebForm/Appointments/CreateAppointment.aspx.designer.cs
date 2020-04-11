@@ -33,6 +33,15 @@ namespace ClinicSystemInWebForm.Appointments
         protected global::System.Web.UI.WebControls.DropDownList AppointmentDoctorList;
 
         /// <summary>
+        /// AppointmentDoctorList_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AppointmentDoctorList_Validator;
+
+        /// <summary>
         /// PatientAppointments control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,15 @@ namespace ClinicSystemInWebForm.Appointments
         protected global::System.Web.UI.WebControls.TextBox AppointmentDateTextBox;
 
         /// <summary>
+        /// AppointmentDateValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AppointmentDateValidator;
+
+        /// <summary>
         /// AppointmentTimeLabel control.
         /// </summary>
         /// <remarks>
@@ -78,6 +96,15 @@ namespace ClinicSystemInWebForm.Appointments
         protected global::System.Web.UI.WebControls.TextBox AppointmentTimeTextBox;
 
         /// <summary>
+        /// AppointmentTimeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AppointmentTimeValidator;
+
+        /// <summary>
         /// AppointmentDetailsLabel control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace ClinicSystemInWebForm.Appointments
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AppointmentDetailsTextBox;
+
+        /// <summary>
+        /// appointmentdetails_validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator appointmentdetails_validator;
 
         /// <summary>
         /// AppointmentBack_Button control.

@@ -11,7 +11,15 @@ namespace ClinicSystemInWebForm.Doctor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GetDoctors();
+        }
 
+        private void GetDoctors()
+        {
+            ClinicManagementSystemDataContext dbcontext = new ClinicManagementSystemDataContext();
+
+            DoctorDataGrid.DataSource = dbcontext.TBLDOCTORs;
+            DoctorDataGrid.DataBind();
         }
     }
 }

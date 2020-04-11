@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>C+ Clinic</title>
+    <title>C Clinic</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="CasualUserMaster" runat="server">
         <div>
 
 

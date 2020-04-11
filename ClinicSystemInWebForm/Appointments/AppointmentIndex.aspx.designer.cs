@@ -30,7 +30,7 @@ namespace ClinicSystemInWebForm.Appointments
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow AppointmentheaderRow;
+        protected global::System.Web.UI.WebControls.TableHeaderRow AppointmentheaderRow;
 
         /// <summary>
         /// AppointmentDateRow control.

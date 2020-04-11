@@ -15,13 +15,13 @@ namespace ClinicSystemInWebForm.Shared
     {
 
         /// <summary>
-        /// form1 control.
+        /// loginForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm loginForm;
 
         /// <summary>
         /// LoginImage control.
@@ -33,40 +33,58 @@ namespace ClinicSystemInWebForm.Shared
         protected global::System.Web.UI.WebControls.Image LoginImage;
 
         /// <summary>
-        /// LoginEmailLabel control.
+        /// LoginEmailLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginEmailLabel;
+        protected global::System.Web.UI.WebControls.Label LoginEmailLBL;
 
         /// <summary>
-        /// LoginEmailTextBox control.
+        /// loginEmailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginEmailTextBox;
+        protected global::System.Web.UI.WebControls.TextBox loginEmailTB;
 
         /// <summary>
-        /// LoginPasswordLabel control.
+        /// LoginEmailRFV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginPasswordLabel;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LoginEmailRFV;
 
         /// <summary>
-        /// LoginPasswordTextBox control.
+        /// LoginPasswordLBL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginPasswordTextBox;
+        protected global::System.Web.UI.WebControls.Label LoginPasswordLBL;
+
+        /// <summary>
+        /// LoginPasswordTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LoginPasswordTB;
+
+        /// <summary>
+        /// loginPasswordRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator loginPasswordRFV;
 
         /// <summary>
         /// LoginCheckBox control.
@@ -94,5 +112,14 @@ namespace ClinicSystemInWebForm.Shared
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button loginbutton;
+
+        /// <summary>
+        /// LEmailRegularExpValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator LEmailRegularExpValidator;
     }
 }

@@ -1,18 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="PatientDetails.aspx.cs" Inherits="ClinicSystemInWebForm.Patient.PatientDetails" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="ContePatientDetailsHID" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="PatientDetailBID" ContentPlaceHolderID="MainContent" runat="server">
 
 
 
-    <div id="PatientModal" class="modal fade in">
+<%--    <div id="PatientModal" class="modal fade in">
         <div class="modal-dialog " style="width: 900px;">
             <div class="modal-content">
                 <div id="MyModalContent"></div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 
     <div class="card-header">

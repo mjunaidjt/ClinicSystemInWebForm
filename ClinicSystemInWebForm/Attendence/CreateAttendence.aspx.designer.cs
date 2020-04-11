@@ -24,13 +24,22 @@ namespace ClinicSystemInWebForm.Attendence
         protected global::System.Web.UI.WebControls.Label RemarksL;
 
         /// <summary>
-        /// Remarks control.
+        /// RemarksTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Remarks;
+        protected global::System.Web.UI.WebControls.TextBox RemarksTB;
+
+        /// <summary>
+        /// RemarksRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RemarksRFValidator;
 
         /// <summary>
         /// DiagnosisL control.
@@ -51,6 +60,15 @@ namespace ClinicSystemInWebForm.Attendence
         protected global::System.Web.UI.WebControls.TextBox DiagnosisTB;
 
         /// <summary>
+        /// DiagnosisRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DiagnosisRFValidator;
+
+        /// <summary>
         /// PrescriptionL control.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace ClinicSystemInWebForm.Attendence
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PrescriptionTB;
+
+        /// <summary>
+        /// PrescriptionRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PrescriptionRFValidator;
 
         /// <summary>
         /// SaveAttendence control.

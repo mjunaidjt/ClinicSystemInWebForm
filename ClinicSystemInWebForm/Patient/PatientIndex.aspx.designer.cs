@@ -15,57 +15,12 @@ namespace ClinicSystemInWebForm.Patient
     {
 
         /// <summary>
-        /// PatientDataTable control.
+        /// PatientDataGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table PatientDataTable;
-
-        /// <summary>
-        /// PatientheaderRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow PatientheaderRow;
-
-        /// <summary>
-        /// AddNewPatient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton AddNewPatient;
-
-        /// <summary>
-        /// PatientDateRows control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow PatientDateRows;
-
-        /// <summary>
-        /// DetailsPatient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton DetailsPatient;
-
-        /// <summary>
-        /// DeletePatient control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton DeletePatient;
+        protected global::System.Web.UI.WebControls.GridView PatientDataGrid;
     }
 }

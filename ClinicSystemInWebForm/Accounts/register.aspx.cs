@@ -14,5 +14,9 @@ namespace ClinicSystemInWebForm.Accounts
 
         }
 
+        protected void RegistrationWizard_FinishButtonClick(object sender, WizardNavigationEventArgs e)
+        {
+            Response.Redirect("~/Accounts/login.aspx");
+        }
     }
 }

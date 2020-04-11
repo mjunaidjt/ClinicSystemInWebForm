@@ -42,13 +42,22 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.WizardStep UserDetails;
 
         /// <summary>
-        /// AccountUsernameL control.
+        /// LoginImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AccountUsernameL;
+        protected global::System.Web.UI.WebControls.Image LoginImage;
+
+        /// <summary>
+        /// AccountUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AccountUsername;
 
         /// <summary>
         /// AccountUsernameTB control.
@@ -60,13 +69,22 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.TextBox AccountUsernameTB;
 
         /// <summary>
-        /// AccountPasswordL control.
+        /// registerUsernameRFV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AccountPasswordL;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerUsernameRFV;
+
+        /// <summary>
+        /// AccountPasswordLBL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AccountPasswordLBL;
 
         /// <summary>
         /// AccountPasswordTB control.
@@ -76,6 +94,15 @@ namespace ClinicSystemInWebForm.Accounts
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AccountPasswordTB;
+
+        /// <summary>
+        /// registerPasswordRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerPasswordRFV;
 
         /// <summary>
         /// AccountCnfrmPswrdL control.
@@ -96,6 +123,24 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.TextBox AccountCnfrmPswrdTB;
 
         /// <summary>
+        /// registerCnfrmPasswordRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerCnfrmPasswordRFV;
+
+        /// <summary>
+        /// PaswrdCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator PaswrdCompareValidator;
+
+        /// <summary>
         /// UserRecoveretails control.
         /// </summary>
         /// <remarks>
@@ -114,13 +159,22 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.Label AccountEmailL;
 
         /// <summary>
-        /// AccountEmailTextBox control.
+        /// AccountEmailB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AccountEmailTextBox;
+        protected global::System.Web.UI.WebControls.TextBox AccountEmailB;
+
+        /// <summary>
+        /// registerEmailRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerEmailRFV;
 
         /// <summary>
         /// AccountPhoneL control.
@@ -132,13 +186,22 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.Label AccountPhoneL;
 
         /// <summary>
-        /// TextBox1 control.
+        /// AccountPhoneTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox AccountPhoneTB;
+
+        /// <summary>
+        /// registerPhoneRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerPhoneRFV;
 
         /// <summary>
         /// Role control.
@@ -150,13 +213,22 @@ namespace ClinicSystemInWebForm.Accounts
         protected global::System.Web.UI.WebControls.Label Role;
 
         /// <summary>
-        /// RolDropDown control.
+        /// RoleDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList RolDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList RoleDropDown;
+
+        /// <summary>
+        /// registerRoleRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator registerRoleRFV;
 
         /// <summary>
         /// AccountAgreementCheck control.
@@ -175,5 +247,23 @@ namespace ClinicSystemInWebForm.Accounts
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label AccountAgreementL;
+
+        /// <summary>
+        /// AccEmailRegularExpValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator AccEmailRegularExpValidator;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
     }
 }

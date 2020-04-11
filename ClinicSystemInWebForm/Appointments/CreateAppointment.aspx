@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="CreateAppointment.aspx.cs" Inherits="ClinicSystemInWebForm.Appointments.CreateAppointment" %>
-<asp:Content ID="AppointmentHead" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="CreateAppointmentHID" ContentPlaceHolderID="head" runat="server">
     <title>appointment/create</title>
 </asp:Content>
 
-<asp:Content ID="CreateAppointment" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="CreateAppointmentBID" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="row">
         <div class="col-md-6 col-xs-12">
@@ -18,12 +18,13 @@
                     <div class="form-group">
                         <asp:Label ID="AppointmentDoctorLabel" runat="server" Text="Doctor" CssClass="control-label col-md-2 col-sm-2 col-xs-12"></asp:Label>
                            <asp:DropDownList ID="AppointmentDoctorList" runat="server" CssClass="form-control  col-md-9 col-sm-9 col-xs-12">
-                               <asp:ListItem>Muhammad Junaid</asp:ListItem>
+                               <asp:ListItem Selected="True">Select Doctor</asp:ListItem>
                                <asp:ListItem>Umme Habiba</asp:ListItem>
-                               <asp:ListItem Selected="True">Select One</asp:ListItem>
+                               <asp:ListItem>Muhammad Junaid</asp:ListItem>
                             </asp:DropDownList>
-                   <%--         <asp:RequiredFieldValidator ID="AppointmentDoctorList_Validator" runat="server" ControlToValidate="AppointmentDoctorList" ErrorMessage="Required"   
-                               ForeColor="Red" CssClass="form-control"></asp:RequiredFieldValidator>--%>
+                                    <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="AppointmentDoctorList_Validator" runat="server" ControlToValidate="AppointmentDoctorList" InitialValue="Select Doctor"  ErrorMessage="Required"   
+                               ForeColor="Red" CssClass="form-control"></asp:RequiredFieldValidator>
                         <%--</div>--%>
                     </div>
 
@@ -71,26 +72,29 @@
                     <div class="form-group">
                            <asp:Label ID="AppointmentDateLabel" runat="server" Text="Date" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                           <asp:TextBox ID="AppointmentDateTextBox" runat="server" CssClass="form-control date" ToolTip="Enter the date of appoinment here">Enter Date</asp:TextBox>
-                           <%--<asp:RequiredFieldValidator ID="AppointmentDateValidator" runat="server" ControlToValidate="AppointmentDateTextBox" ErrorMessage="Required"   
-                              ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                           <asp:TextBox ID="AppointmentDateTextBox" runat="server" CssClass="form-control date" ToolTip="Enter the date of appoinment here" TextMode="Date"></asp:TextBox>
+                                    <%--RequiredFieldValidator--%>                          
+                            <asp:RequiredFieldValidator ID="AppointmentDateValidator" runat="server" ControlToValidate="AppointmentDateTextBox" ErrorMessage="Required"   
+                              ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <asp:Label ID="AppointmentTimeLabel" runat="server" Text="Time" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <asp:TextBox ID="AppointmentTimeTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Time of Appointment here">Enter time here</asp:TextBox>
-                            <%--<asp:RequiredFieldValidator ID="AppointmentTimeValidator" runat="server" ControlToValidate="AppointmentDetailsTextBox" ErrorMessage="Required"   
-                               ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                            <asp:TextBox ID="AppointmentTimeTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Time of Appointment here"  TextMode="Time"></asp:TextBox>
+                                    <%--RequiredFieldValidator--%>                         
+                            <asp:RequiredFieldValidator ID="AppointmentTimeValidator" runat="server" ControlToValidate="AppointmentDetailsTextBox" ErrorMessage="Required"   
+                               ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                     </div>              
                     <div class="form-group">
                          <asp:Label ID="AppointmentDetailsLabel" runat="server" Text="Details" CssClass="control-label col-md-3 col-sm-3 col-xs-12"></asp:Label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
-                            <asp:TextBox ID="AppointmentDetailsTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Details of Appointment here" >Enter Appoinment Details</asp:TextBox>
-                  <%--          <asp:requiredfieldvalidator id="appointmentdetails_validator" runat="server" controltovalidate="appointmentdetailstextbox" errormessage="required"   
-                               forecolor="red"></asp:requiredfieldvalidator>--%>
+                            <asp:TextBox ID="AppointmentDetailsTextBox" runat="server" CssClass="form-control" ToolTip="Enter the Details of Appointment here" ></asp:TextBox>
+                                    <%--RequiredFieldValidator--%>                           
+                            <asp:requiredfieldvalidator id="appointmentdetails_validator" runat="server" controltovalidate="AppointmentDetailsTextBox" errormessage="required"   
+                               forecolor="red"></asp:requiredfieldvalidator>
                         </div>
                     </div>
                     <div class="ln_solid"></div>

@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>C+ Clinic</title>
+    <title>C Clinic</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -27,7 +27,7 @@
 
         <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading" style="color:white; font-size: 25px">C+ Clinic</div>
+      <div class="sidebar-heading" style="color:white; font-size: 25px">C Clinic</div>
       <div class="list-group list-group-flush">
         
         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-user-circle-o fa-5x"></i></asp:HyperLink>
@@ -45,7 +45,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-light border-bottom">
          <button class="btn btn-light" id="menu-toggle">
             <i class="fa fa-bars fa-lg"></i>
         </button>

@@ -24,13 +24,22 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.Label PatientName;
 
         /// <summary>
-        /// Patient_Name control.
+        /// Patient_NameTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Patient_Name;
+        protected global::System.Web.UI.WebControls.TextBox Patient_NameTB;
+
+        /// <summary>
+        /// Patient_NameTBRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Patient_NameTBRFValidator;
 
         /// <summary>
         /// PatientGender control.
@@ -51,6 +60,15 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.DropDownList GenderDropDownList;
 
         /// <summary>
+        /// GenderDropDownListRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator GenderDropDownListRFV;
+
+        /// <summary>
         /// PatientBirth control.
         /// </summary>
         /// <remarks>
@@ -60,13 +78,22 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.Label PatientBirth;
 
         /// <summary>
-        /// BirthTextBox control.
+        /// PatientBirthTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BirthTextBox;
+        protected global::System.Web.UI.WebControls.TextBox PatientBirthTB;
+
+        /// <summary>
+        /// BirthTextBoxRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator BirthTextBoxRFV;
 
         /// <summary>
         /// PatientHieght control.
@@ -87,6 +114,15 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.TextBox Patient_Height;
 
         /// <summary>
+        /// Patient_HeightRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Patient_HeightRFV;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +139,15 @@ namespace ClinicSystemInWebForm.Patient
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Patient_Weight;
+
+        /// <summary>
+        /// Patient_WeightRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Patient_WeightRFV;
 
         /// <summary>
         /// PatientPhone control.
@@ -123,6 +168,15 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.TextBox Patient_Phone;
 
         /// <summary>
+        /// Patient_PhoneRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Patient_PhoneRFValidator;
+
+        /// <summary>
         /// PatientEmailAddress control.
         /// </summary>
         /// <remarks>
@@ -132,13 +186,22 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.Label PatientEmailAddress;
 
         /// <summary>
-        /// Patient_Address control.
+        /// Patient_EAddressTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Patient_Address;
+        protected global::System.Web.UI.WebControls.TextBox Patient_EAddressTB;
+
+        /// <summary>
+        /// Patient_EAddressRFValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Patient_EAddressRFValidator;
 
         /// <summary>
         /// PatientAddress control.
@@ -150,12 +213,48 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.Label PatientAddress;
 
         /// <summary>
-        /// TextBox1 control.
+        /// PatientAddressTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox PatientAddressTB;
+
+        /// <summary>
+        /// PatientAddressTBRFV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PatientAddressTBRFV;
+
+        /// <summary>
+        /// PatientSavebtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PatientSavebtn;
+
+        /// <summary>
+        /// RangeValidatorHeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorHeight;
+
+        /// <summary>
+        /// RangeValidatorWeight control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorWeight;
     }
 }

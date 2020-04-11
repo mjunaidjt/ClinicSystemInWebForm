@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="AppointmentIndex.aspx.cs" Inherits="ClinicSystemInWebForm.Appointments.AppointmentIndex" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="AppointmentIndexHID" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="AppointmentIndexBID" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="card">
@@ -14,7 +14,7 @@
 
 
                 <asp:Table ID="AppointmentTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">
-                    <asp:TableRow ID="AppointmentheaderRow" runat="server">
+                    <asp:TableHeaderRow ID="AppointmentheaderRow" runat="server">
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Token/ID for Patient">Token</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Name of Patient">Patient Name</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Phone of Patient">Phone</asp:TableCell>
@@ -25,7 +25,7 @@
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Status of Appointment">Status</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip=""></asp:TableCell>
 
-                    </asp:TableRow>
+                    </asp:TableHeaderRow>
                     <asp:TableRow ID="AppointmentDateRow" runat="server">
 
                         <asp:TableCell runat="server" ToolTip="Token/ID for Patient">001</asp:TableCell>

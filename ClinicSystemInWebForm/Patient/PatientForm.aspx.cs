@@ -13,5 +13,34 @@ namespace ClinicSystemInWebForm.Patient
         {
 
         }
+
+        private void InsertPatient()
+        {
+            using (ClinicManagementSystemDataContext dbcontext = new ClinicManagementSystemDataContext())  
+            {
+                TBLPATIENT newPatient = new TBLPATIENT()
+                {
+                    patient_Name = Patient_NameTB.Text,
+                    patient_Gender = GenderDropDownList.DataValueField,
+                    patient_BirthDate = PatientBirthTB.Text,
+                   /* patient_BirthDate = DateTime.Parse(PatientBirth.Text),*/
+                    patient_Height = Patient_Height.Text,
+                    patient_Weight = Int32.Parse(Patient_Weight.Text) ,   
+                    patient_Phone = Patient_Phone.Text,
+                    patient_Email = Patient_EAddressTB.Text,
+                    patient_Address = PatientAddressTB.Text
+                };
+
+                dbcontext.TBLPATIENTs.InsertOnSubmit(newPatient);
+                dbcontext.SubmitChanges();
+
+            }
+            
+        }
+
+        protected void PatientSavebtn_Click(object sender, EventArgs e)
+        {
+           InsertPatient();
+        }
     }
 }

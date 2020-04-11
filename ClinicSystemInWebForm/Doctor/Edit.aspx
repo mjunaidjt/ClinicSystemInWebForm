@@ -20,43 +20,54 @@
                             <asp:Label ID="DoctorNameLabel" runat="server" CssClass="control-label col-sm-3 col-xs-12">Name</asp:Label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <asp:TextBox ID="DoctorNameTB" runat="server" CssClass="form-control"></asp:TextBox>
+                                  <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="DoctorNameTBRFValidator" runat="server" InitialValue="" ControlToValidate="DoctorNameTB" ErrorMessage="Required"
+                                ForeColor="Red" ></asp:RequiredFieldValidator>  
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="DoctorSpecializationL" runat="server" CssClass="control-label col-sm-3 col-xs-12">Specialization</asp:Label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <asp:TextBox ID="DoctorSpecializationTB" runat="server" CssClass="form-control"></asp:TextBox>
+                                  <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="DrSpecializationRFValidator" runat="server" InitialValue="" ControlToValidate="DoctorSpecializationTB" ErrorMessage="Required"
+                                ForeColor="Red" ></asp:RequiredFieldValidator>  
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="DoctorPhoneL" runat="server" CssClass="control-label col-sm-3 col-xs-12">Specialization</asp:Label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <asp:TextBox ID="DoctorPhoneTB" runat="server" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="DoctorPhoneTB" runat="server" CssClass="form-control" ></asp:TextBox>
+                                  <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="DoctorPhoneTBRFValidator" runat="server" InitialValue="" ControlToValidate="DoctorPhoneTB" ErrorMessage="Required"
+                                ForeColor="Red"></asp:RequiredFieldValidator>  
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="DoctorAddressL" runat="server" CssClass="control-label col-sm-3 col-xs-12">Address</asp:Label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <asp:TextBox ID="DoctorAdressTB" runat="server" CssClass="form-control"></asp:TextBox>
+                                  <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="DoctorAdressTBRFValidator" runat="server" InitialValue="" ControlToValidate="DoctorAdressTB" ErrorMessage="Required"
+                                ForeColor="Red" ></asp:RequiredFieldValidator>  
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="DrStatusL" runat="server" CssClass="control-label col-sm-3 col-xs-12">Status</asp:Label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="custom-radio">
-
-                                    <asp:Label ID="AvailableL" runat="server" CssClass="control-label col-sm-3 col-xs-12">
-                                        <asp:RadioButton ID="RadioAvailable" runat="server" /> Available
-                                    </asp:Label>
-                                    <asp:Label ID="ClosedL" runat="server" CssClass="control-label col-sm-3 col-xs-12">
-                                        <asp:RadioButton ID="RadioClosed" runat="server" /> Closed
-                                    </asp:Label>
-
+                                    <asp:RadioButtonList ID="DRStatusR" runat="server">
+                                        <asp:ListItem >Available</asp:ListItem>
+                                        <asp:ListItem >Closed</asp:ListItem>
+                                    </asp:RadioButtonList>
                                 </div>
                             </div>
+                              <%--RequiredFieldValidator--%>
+                            <asp:RequiredFieldValidator ID="DrStatusLRFValidator" runat="server" InitialValue="" ControlToValidate="DRStatusR" ErrorMessage="Required"
+                                ForeColor="Red"></asp:RequiredFieldValidator>  
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-inline">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-4">
                                 <asp:LinkButton ID="DrDetailBackLB" PostBackUrl="detail of doctor" runat="server" CssClass="btn btn-default">Back</asp:LinkButton>
                                  &nbsp

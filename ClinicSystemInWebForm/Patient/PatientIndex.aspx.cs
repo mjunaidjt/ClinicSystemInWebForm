@@ -11,7 +11,15 @@ namespace ClinicSystemInWebForm.Patient
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            GetPatientData();
+        }
 
+        private void GetPatientData()
+        {
+            ClinicManagementSystemDataContext dbcontext = new ClinicManagementSystemDataContext();
+            PatientDataGrid.DataSource = dbcontext.TBLPATIENTs;
+            PatientDataGrid.DataBind();
+          
         }
     }
 }

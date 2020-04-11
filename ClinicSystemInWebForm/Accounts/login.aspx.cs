@@ -13,5 +13,13 @@ namespace ClinicSystemInWebForm.Shared
         {
 
         }
+
+        protected void loginbutton_Click(object sender, EventArgs e)
+        {
+            Session["useremail"] = loginEmailTB.Text;
+            Session["userpassword"] = LoginPasswordTB.Text;
+
+            Response.Redirect("~/Home/HomeIndex.aspx");
+        }
     }
 }
