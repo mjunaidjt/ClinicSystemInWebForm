@@ -52,15 +52,6 @@
       <Association Name="TBLUSER_TBLUSERROLE" Member="TBLUSER" ThisKey="userID" OtherKey="userID" Type="TBLUSER" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TBLUSERS" Member="TBLUSERs">
-    <Type Name="TBLUSER">
-      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="userName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="userEmail" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="userpassword" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Association Name="TBLUSER_TBLUSERROLE" Member="TBLUSERROLEs" ThisKey="userID" OtherKey="userID" Type="TBLUSERROLE" />
-    </Type>
-  </Table>
   <Table Name="dbo.TBLPATIENT" Member="TBLPATIENTs">
     <Type Name="TBLPATIENT">
       <Column Name="patient_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -73,6 +64,17 @@
       <Column Name="patient_Address" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="patient_Gender" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
       <Association Name="TBLPATIENT_TBLAPPOINTMENT" Member="TBLAPPOINTMENTs" ThisKey="patient_ID" OtherKey="appointment_PatientID" Type="TBLAPPOINTMENT" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBLUSERS" Member="TBLUSERs">
+    <Type Name="TBLUSER">
+      <Column Name="userID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="userEmail" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="userPhone" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="userpassword" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="is_Active" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="TBLUSER_TBLUSERROLE" Member="TBLUSERROLEs" ThisKey="userID" OtherKey="userID" Type="TBLUSERROLE" />
     </Type>
   </Table>
 </Database>

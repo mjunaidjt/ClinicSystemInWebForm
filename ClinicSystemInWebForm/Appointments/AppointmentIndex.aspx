@@ -12,9 +12,34 @@
 
             <div class="card-body">
 
+                <div class="table-responsive">
 
-                <asp:Table ID="AppointmentTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">
-                    <asp:TableHeaderRow ID="AppointmentheaderRow" runat="server">
+                <asp:GridView ID="AppointmentDataGrid"  runat="server" Width="100%" CssClass="table table-striped table-bordered " AutoGenerateColumns="false" DataKeyNames="appoinment_ID">                       
+                        <Columns>
+                            <asp:BoundField DataField="appoinment_ID" HeaderText="Token" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass="" />
+                            <asp:BoundField DataField="patient_Name" HeaderText="Patient Name" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="patient_BirthDate" HeaderText="Date of Birth" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="patient_Phone" HeaderText="Phone" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />                            
+                            <asp:BoundField DataField="" HeaderText="Date Time" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="doctor_Name" HeaderText="Appointed Doctor" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="" HeaderText="Detail"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="appointment_Status" HeaderText="Status"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                       
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                   <asp:LinkButton ID="EditAppointmentLB" runat="server" PostBackUrl="~/Appointments/Edit.aspx" CssClass="btn btn-primary btn-sm"><i class="fa fa-pencil-square"></i>Edit</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            
+                        </Columns>
+                        
+                    </asp:GridView>
+
+                </div>
+
+
+
+                <%--<asp:Table ID="AppointmentTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">                    <asp:TableHeaderRow ID="AppointmentheaderRow" runat="server">
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Token/ID for Patient">Token</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Name of Patient">Patient Name</asp:TableCell>
                         <asp:TableCell runat="server" Font-Bold="True" ToolTip="Phone of Patient">Phone</asp:TableCell>
@@ -52,8 +77,7 @@
 
                     </asp:TableRow>
 
-                </asp:Table>
-
+                </asp:Table>  --%>
 
             </div>
         </div>

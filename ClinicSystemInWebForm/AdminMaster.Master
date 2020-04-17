@@ -16,6 +16,12 @@
 
     </asp:ContentPlaceHolder>
   
+    <style>
+        .customside{
+            position:sticky;
+        }
+    </style>
+
 </head>
 <body>
     <form id="AdminMaster" runat="server">
@@ -26,8 +32,8 @@
   <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-    <div class="bg-dark border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading" style="color:white; font-size: 25px">C Clinic</div>
+    <div class="bg-dark border-right customside" style=" position:sticky" id="sidebar-wrapper">
+      <div class="sidebar-heading" style="color:white; font-size: 25px;">C Clinic</div>
       <div class="list-group list-group-flush">
         
         <asp:HyperLink ID="HyperLink1" runat="server" CssClass="list-group-item list-group-item-action bg-dark" ForeColor="White"><i class="fa fa-user-circle-o fa-5x"></i></asp:HyperLink>
@@ -60,7 +66,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
              </li>
             <li class="nav-item">
-              <asp:HyperLink ID="userprofilehyperlink" NavigateUrl="#" CssClass="nav-link" runat="server"><i class="fa fa-user fa-lg"></i> Admin </asp:HyperLink>
+              <asp:HyperLink ID="userprofilehyperlink" NavigateUrl="#" CssClass="nav-link" runat="server"><i class="fa fa-user fa-lg"></i></asp:HyperLink>
             <%--  <a class="nav-link" href="#"></a>--%>
             </li>
 <%--            <li class="nav-item dropdown">

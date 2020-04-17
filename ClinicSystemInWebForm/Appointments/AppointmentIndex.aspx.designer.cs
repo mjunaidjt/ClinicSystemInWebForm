@@ -15,57 +15,12 @@ namespace ClinicSystemInWebForm.Appointments
     {
 
         /// <summary>
-        /// AppointmentTable control.
+        /// AppointmentDataGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table AppointmentTable;
-
-        /// <summary>
-        /// AppointmentheaderRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderRow AppointmentheaderRow;
-
-        /// <summary>
-        /// AppointmentDateRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow AppointmentDateRow;
-
-        /// <summary>
-        /// AppointmentStatusHyperlinkA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AppointmentStatusHyperlinkA;
-
-        /// <summary>
-        /// AppointmentStatusHyperlinkP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AppointmentStatusHyperlinkP;
-
-        /// <summary>
-        /// EditAppointmentLB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton EditAppointmentLB;
+        protected global::System.Web.UI.WebControls.GridView AppointmentDataGrid;
     }
 }

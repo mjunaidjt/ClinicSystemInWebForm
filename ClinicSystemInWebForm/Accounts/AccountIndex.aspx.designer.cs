@@ -15,57 +15,12 @@ namespace ClinicSystemInWebForm.Accounts
     {
 
         /// <summary>
-        /// UserAccountTable control.
+        /// UserAccountDataGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table UserAccountTable;
-
-        /// <summary>
-        /// UserAccountheaderRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderRow UserAccountheaderRow;
-
-        /// <summary>
-        /// UserAccountDataRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow UserAccountDataRow;
-
-        /// <summary>
-        /// AccountHyperlinkA control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AccountHyperlinkA;
-
-        /// <summary>
-        /// AccountHyperlinkL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AccountHyperlinkL;
-
-        /// <summary>
-        /// EditUserAccLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton EditUserAccLink;
+        protected global::System.Web.UI.WebControls.GridView UserAccountDataGrid;
     }
 }

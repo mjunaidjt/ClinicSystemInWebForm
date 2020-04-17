@@ -12,6 +12,35 @@ namespace ClinicSystemInWebForm.Accounts
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            GetUserAccounts();
+
         }
+
+        private void GetUserAccounts()
+        {
+            ClinicManagementSystemDataContext dbcontext = new ClinicManagementSystemDataContext();
+
+            UserAccountDataGrid.DataSource = from userrole in dbcontext.TBLUSERROLEs
+                                             join user in dbcontext.TBLUSERs on userrole.userID equals user.userID
+                                             join role in dbcontext.TBLROLEs on userrole.roleID equals role.roleID
+                                             select new
+                                             {
+                                                 user.userID,
+                                                 user.userName,
+                                                 user.userEmail,
+                                                 user.userPhone,
+                                                 role.roleName,
+                                                 userrole.userRoleDesc,
+                                                 user.is_Active
+
+                                             };
+
+
+            UserAccountDataGrid.DataBind();
+
+
+        }
+
+
     }
-}
+    }

@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ClinicSystemInWebForm.Shared
+namespace ClinicSystemInWebForm.Accounts
 {
 
 
-    public partial class login
+    public partial class LoginPage
     {
-
-        /// <summary>
-        /// loginForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm loginForm;
 
         /// <summary>
         /// LoginImage control.

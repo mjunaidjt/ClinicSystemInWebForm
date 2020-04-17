@@ -21,7 +21,7 @@ namespace ClinicSystemInWebForm.Patient
                 TBLPATIENT newPatient = new TBLPATIENT()
                 {
                     patient_Name = Patient_NameTB.Text,
-                    patient_Gender = GenderDropDownList.DataValueField,
+                    patient_Gender = GenderDropDownList.SelectedValue,
                     patient_BirthDate = PatientBirthTB.Text,
                    /* patient_BirthDate = DateTime.Parse(PatientBirth.Text),*/
                     patient_Height = Patient_Height.Text,

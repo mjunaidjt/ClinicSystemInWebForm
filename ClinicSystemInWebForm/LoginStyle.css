@@ -11,8 +11,8 @@
 
 .form-container {
     margin: auto;
-    padding: 20px 25px;
-    border-radius: 12px;
+    padding: 20px 30px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px 0px #000;
 }
 .custom-form-control{
@@ -20,6 +20,5 @@
 }
 .custom-btn {
     padding: 6px 25px;
-    
     border-radius: 20px;
 }

@@ -16,7 +16,27 @@
             <div class="card">
                 <div class="card-body">
 
-                    <asp:Table ID="UserAccountTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">
+                  <asp:GridView ID="UserAccountDataGrid"  runat="server" Width="100%" CssClass="table table-striped table-bordered table-responsive-md" AutoGenerateColumns="false">                       
+                        <Columns>
+
+                            <asp:BoundField DataField="userName" HeaderText="User" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass="" />
+                            <asp:BoundField DataField="userEmail" HeaderText="Email" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="userPhone" HeaderText="Phone" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="roleName" HeaderText="Role"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="userRoleDesc" HeaderText="Role Description"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="is_Active" HeaderText="Account Status" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                       
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="EditAppointmentLB" PostBackUrl="#" runat="server" CssClass="btn btn-default btn-sm"><i class="fa fa-pencil-square"></i></asp:LinkButton>                                                                   
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            
+                        </Columns>
+                        
+                    </asp:GridView>
+
+                    <%--<asp:Table ID="UserAccountTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">
                         <asp:TableHeaderRow ID="UserAccountheaderRow" runat="server">
                             <asp:TableCell runat="server" Font-Bold="True" ToolTip=" Account Username">User</asp:TableCell>
                             <asp:TableCell runat="server" Font-Bold="True" ToolTip="Email of User">Email</asp:TableCell>
@@ -47,7 +67,7 @@
 
                             </asp:TableCell>
                         </asp:TableRow>
-                    </asp:Table>
+                    </asp:Table>--%>
 
                 </div>
             </div>

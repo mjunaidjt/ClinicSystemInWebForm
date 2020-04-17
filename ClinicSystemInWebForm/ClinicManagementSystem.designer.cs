@@ -45,12 +45,12 @@ namespace ClinicSystemInWebForm
     partial void InsertTBLUSERROLE(TBLUSERROLE instance);
     partial void UpdateTBLUSERROLE(TBLUSERROLE instance);
     partial void DeleteTBLUSERROLE(TBLUSERROLE instance);
-    partial void InsertTBLUSER(TBLUSER instance);
-    partial void UpdateTBLUSER(TBLUSER instance);
-    partial void DeleteTBLUSER(TBLUSER instance);
     partial void InsertTBLPATIENT(TBLPATIENT instance);
     partial void UpdateTBLPATIENT(TBLPATIENT instance);
     partial void DeleteTBLPATIENT(TBLPATIENT instance);
+    partial void InsertTBLUSER(TBLUSER instance);
+    partial void UpdateTBLUSER(TBLUSER instance);
+    partial void DeleteTBLUSER(TBLUSER instance);
     #endregion
 		
 		public ClinicManagementSystemDataContext() : 
@@ -123,19 +123,19 @@ namespace ClinicSystemInWebForm
 			}
 		}
 		
-		public System.Data.Linq.Table<TBLUSER> TBLUSERs
-		{
-			get
-			{
-				return this.GetTable<TBLUSER>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TBLPATIENT> TBLPATIENTs
 		{
 			get
 			{
 				return this.GetTable<TBLPATIENT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBLUSER> TBLUSERs
+		{
+			get
+			{
+				return this.GetTable<TBLUSER>();
 			}
 		}
 	}
@@ -1195,168 +1195,6 @@ namespace ClinicSystemInWebForm
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLUSERS")]
-	public partial class TBLUSER : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _userID;
-		
-		private string _userName;
-		
-		private string _userEmail;
-		
-		private string _userpassword;
-		
-		private EntitySet<TBLUSERROLE> _TBLUSERROLEs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnuserIDChanging(int value);
-    partial void OnuserIDChanged();
-    partial void OnuserNameChanging(string value);
-    partial void OnuserNameChanged();
-    partial void OnuserEmailChanging(string value);
-    partial void OnuserEmailChanged();
-    partial void OnuserpasswordChanging(string value);
-    partial void OnuserpasswordChanged();
-    #endregion
-		
-		public TBLUSER()
-		{
-			this._TBLUSERROLEs = new EntitySet<TBLUSERROLE>(new Action<TBLUSERROLE>(this.attach_TBLUSERROLEs), new Action<TBLUSERROLE>(this.detach_TBLUSERROLEs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int userID
-		{
-			get
-			{
-				return this._userID;
-			}
-			set
-			{
-				if ((this._userID != value))
-				{
-					this.OnuserIDChanging(value);
-					this.SendPropertyChanging();
-					this._userID = value;
-					this.SendPropertyChanged("userID");
-					this.OnuserIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
-		public string userName
-		{
-			get
-			{
-				return this._userName;
-			}
-			set
-			{
-				if ((this._userName != value))
-				{
-					this.OnuserNameChanging(value);
-					this.SendPropertyChanging();
-					this._userName = value;
-					this.SendPropertyChanged("userName");
-					this.OnuserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userEmail", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
-		public string userEmail
-		{
-			get
-			{
-				return this._userEmail;
-			}
-			set
-			{
-				if ((this._userEmail != value))
-				{
-					this.OnuserEmailChanging(value);
-					this.SendPropertyChanging();
-					this._userEmail = value;
-					this.SendPropertyChanged("userEmail");
-					this.OnuserEmailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userpassword", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string userpassword
-		{
-			get
-			{
-				return this._userpassword;
-			}
-			set
-			{
-				if ((this._userpassword != value))
-				{
-					this.OnuserpasswordChanging(value);
-					this.SendPropertyChanging();
-					this._userpassword = value;
-					this.SendPropertyChanged("userpassword");
-					this.OnuserpasswordChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLUSER_TBLUSERROLE", Storage="_TBLUSERROLEs", ThisKey="userID", OtherKey="userID")]
-		public EntitySet<TBLUSERROLE> TBLUSERROLEs
-		{
-			get
-			{
-				return this._TBLUSERROLEs;
-			}
-			set
-			{
-				this._TBLUSERROLEs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBLUSERROLEs(TBLUSERROLE entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLUSER = this;
-		}
-		
-		private void detach_TBLUSERROLEs(TBLUSERROLE entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLUSER = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLPATIENT")]
 	public partial class TBLPATIENT : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1636,6 +1474,216 @@ namespace ClinicSystemInWebForm
 		{
 			this.SendPropertyChanging();
 			entity.TBLPATIENT = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLUSERS")]
+	public partial class TBLUSER : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _userID;
+		
+		private string _userName;
+		
+		private string _userEmail;
+		
+		private string _userPhone;
+		
+		private string _userpassword;
+		
+		private char _is_Active;
+		
+		private EntitySet<TBLUSERROLE> _TBLUSERROLEs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuserIDChanging(int value);
+    partial void OnuserIDChanged();
+    partial void OnuserNameChanging(string value);
+    partial void OnuserNameChanged();
+    partial void OnuserEmailChanging(string value);
+    partial void OnuserEmailChanged();
+    partial void OnuserPhoneChanging(string value);
+    partial void OnuserPhoneChanged();
+    partial void OnuserpasswordChanging(string value);
+    partial void OnuserpasswordChanged();
+    partial void Onis_ActiveChanging(char value);
+    partial void Onis_ActiveChanged();
+    #endregion
+		
+		public TBLUSER()
+		{
+			this._TBLUSERROLEs = new EntitySet<TBLUSERROLE>(new Action<TBLUSERROLE>(this.attach_TBLUSERROLEs), new Action<TBLUSERROLE>(this.detach_TBLUSERROLEs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int userID
+		{
+			get
+			{
+				return this._userID;
+			}
+			set
+			{
+				if ((this._userID != value))
+				{
+					this.OnuserIDChanging(value);
+					this.SendPropertyChanging();
+					this._userID = value;
+					this.SendPropertyChanged("userID");
+					this.OnuserIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userName", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string userName
+		{
+			get
+			{
+				return this._userName;
+			}
+			set
+			{
+				if ((this._userName != value))
+				{
+					this.OnuserNameChanging(value);
+					this.SendPropertyChanging();
+					this._userName = value;
+					this.SendPropertyChanged("userName");
+					this.OnuserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userEmail", DbType="VarChar(255) NOT NULL", CanBeNull=false)]
+		public string userEmail
+		{
+			get
+			{
+				return this._userEmail;
+			}
+			set
+			{
+				if ((this._userEmail != value))
+				{
+					this.OnuserEmailChanging(value);
+					this.SendPropertyChanging();
+					this._userEmail = value;
+					this.SendPropertyChanged("userEmail");
+					this.OnuserEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userPhone", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string userPhone
+		{
+			get
+			{
+				return this._userPhone;
+			}
+			set
+			{
+				if ((this._userPhone != value))
+				{
+					this.OnuserPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._userPhone = value;
+					this.SendPropertyChanged("userPhone");
+					this.OnuserPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userpassword", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string userpassword
+		{
+			get
+			{
+				return this._userpassword;
+			}
+			set
+			{
+				if ((this._userpassword != value))
+				{
+					this.OnuserpasswordChanging(value);
+					this.SendPropertyChanging();
+					this._userpassword = value;
+					this.SendPropertyChanged("userpassword");
+					this.OnuserpasswordChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_is_Active", DbType="Char(1) NOT NULL")]
+		public char is_Active
+		{
+			get
+			{
+				return this._is_Active;
+			}
+			set
+			{
+				if ((this._is_Active != value))
+				{
+					this.Onis_ActiveChanging(value);
+					this.SendPropertyChanging();
+					this._is_Active = value;
+					this.SendPropertyChanged("is_Active");
+					this.Onis_ActiveChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLUSER_TBLUSERROLE", Storage="_TBLUSERROLEs", ThisKey="userID", OtherKey="userID")]
+		public EntitySet<TBLUSERROLE> TBLUSERROLEs
+		{
+			get
+			{
+				return this._TBLUSERROLEs;
+			}
+			set
+			{
+				this._TBLUSERROLEs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TBLUSERROLEs(TBLUSERROLE entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLUSER = this;
+		}
+		
+		private void detach_TBLUSERROLEs(TBLUSERROLE entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLUSER = null;
 		}
 	}
 }

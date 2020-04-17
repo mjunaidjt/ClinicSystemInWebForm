@@ -17,7 +17,9 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="card-body">
-                            
+                      
+                <div class="table-responsive-md">
+                 
                     <asp:GridView ID="PatientDataGrid" Width="100%" CssClass="table table-striped table-responsive-sm table-bordered table-hover" runat="server"  AutoGenerateColumns="False" DataKeyNames="patient_ID"  >
                         <Columns>
                             <asp:BoundField DataField="patient_ID" HeaderText="Token ID" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
@@ -31,11 +33,10 @@
                             <asp:TemplateField>
                               <HeaderTemplate>
                                     <asp:LinkButton ID="AddNewPatient" runat="server" CssClass="btn btn-primary btn-sm" PostBackUrl="~/Patient/PatientForm.aspx"><i class="fa fa-edit"></i>Add</asp:LinkButton>
-
                               </HeaderTemplate>
                               <ItemTemplate>
 
-                                  <asp:LinkButton ID="DetailsPatient" runat="server" ToolTip="Patient Detail Info"  ForeColor="black" PostBackUrl="~/Patient/PatientDetails.aspx"><i class="fa fa-info"></i></asp:LinkButton>
+                                  <asp:LinkButton ID="DetailsPatient" runat="server" ToolTip="Patient Detail Info"  ForeColor="black" PostBackUrl="~/Patient/PatientDetails.aspx"><i class="fa fa-eye" aria-hidden="true"></i></asp:LinkButton>
                              &nbsp &nbsp
                                   <asp:LinkButton ID="DeletePatient" runat="server" ToolTip="Delete Patient"  ForeColor="red" PostBackUrl="#"><i class="fa fa-trash" aria-hidden="true"></i></asp:LinkButton>
                               
@@ -44,6 +45,8 @@
 
                         </Columns>
                     </asp:GridView>
+                </div>
+
 
     <%--                  <asp:Table ID="PatientDataTable" runat="server" CssClass="data table table-striped table-responsive-sm no-margin">
                         <asp:TableHeaderRow ID="PatientheaderRow" runat="server">

@@ -18,8 +18,8 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="card-body">
-
-                    <asp:GridView ID="DoctorDataGrid"  runat="server" Width="100%" CssClass="table table-striped table-bordered tabletable-responsive-sm" AutoGenerateColumns="false" DataKeyNames="doctor_ID">                       
+                    <div class="table-responsive-md">
+                    <asp:GridView ID="DoctorDataGrid"  runat="server" Width="100%" CssClass="table table-striped table-bordered table-responsive-md" AutoGenerateColumns="false" DataKeyNames="doctor_ID">                       
                         <Columns>
                             <asp:BoundField DataField="doctor_ID" HeaderText="Doctor" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass="" />
                             <asp:BoundField DataField="doctor_Name" HeaderText="Doctor Name" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
@@ -36,14 +36,14 @@
                                      </asp:LinkButton>
                                  </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="EditAppointmentLB" PostBackUrl="#" runat="server" CssClass="btn btn-default btn-sm"><i class="fa fa-folder"></i> Details</asp:LinkButton>
+                                    <asp:LinkButton ID="EditAppointmentLB" PostBackUrl="#" runat="server" CssClass="btn btn-default btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             
                         </Columns>
                         
                     </asp:GridView>
-
+                </div>
 
 <%--                    <asp:Table ID="DoctorTable" runat="server" CssClass="data table table-striped table-responsive-sm  no-margin">
                         <asp:TableHeaderRow ID="doctortheaderRow" runat="server">

@@ -11,17 +11,8 @@ namespace ClinicSystemInWebForm.Accounts
 {
 
 
-    public partial class register
+    public partial class RegisterationForm
     {
-
-        /// <summary>
-        /// registrationForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm registrationForm;
 
         /// <summary>
         /// RegistrationWizard control.
@@ -247,6 +238,15 @@ namespace ClinicSystemInWebForm.Accounts
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label AccountAgreementL;
+
+        /// <summary>
+        /// termcond control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink termcond;
 
         /// <summary>
         /// AccEmailRegularExpValidator control.
