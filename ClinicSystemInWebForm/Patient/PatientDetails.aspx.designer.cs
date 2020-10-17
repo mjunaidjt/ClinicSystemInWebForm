@@ -24,13 +24,13 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.Image PatientProfileImg;
 
         /// <summary>
-        /// PatientEditLinkButton control.
+        /// SelectedPatientDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton PatientEditLinkButton;
+        protected global::System.Web.UI.WebControls.FormView SelectedPatientDetail;
 
         /// <summary>
         /// AppointmentPatientID control.
@@ -42,12 +42,12 @@ namespace ClinicSystemInWebForm.Patient
         protected global::System.Web.UI.WebControls.HyperLink AppointmentPatientID;
 
         /// <summary>
-        /// attendancePatientID control.
+        /// AttendancePatientID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink attendancePatientID;
+        protected global::System.Web.UI.WebControls.HyperLink AttendancePatientID;
     }
 }

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace ClinicSystemInWebForm.Accounts
 {
@@ -36,17 +32,17 @@ namespace ClinicSystemInWebForm.Accounts
                                      userrole.userRoleDesc
 
                                  }).SingleOrDefault();
-                                      //FirstOrDefault();
-
+                                      
                 if (LinqQuery != null){
                     Session["Usr_Name"] = LinqQuery.userName;
-                    Session["Usr_Name"] = LinqQuery.userpassword;
                     Session["Usr_Password"] = LinqQuery.userpassword;
                     Session["Usr_Role"] = LinqQuery.roleName;
                     Session["Usr_RoleDesc"] = LinqQuery.userRoleDesc;
 
 
                     Response.Redirect("~/Home/HomeIndex.aspx");
+
+                   
                 }
                 else {
                     Console.WriteLine("Incorrect Username or Password");

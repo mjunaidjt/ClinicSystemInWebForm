@@ -42,13 +42,13 @@ namespace ClinicSystemInWebForm.Appointments
         protected global::System.Web.UI.WebControls.RequiredFieldValidator AppointmentDoctorList_Validator;
 
         /// <summary>
-        /// PatientAppointments control.
+        /// patientAppointmentGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table PatientAppointments;
+        protected global::System.Web.UI.WebControls.GridView patientAppointmentGrid;
 
         /// <summary>
         /// AppointmentDateLabel control.
@@ -139,5 +139,14 @@ namespace ClinicSystemInWebForm.Appointments
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink AppointmentBack_Button;
+
+        /// <summary>
+        /// SaveAppointment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SaveAppointment;
     }
 }

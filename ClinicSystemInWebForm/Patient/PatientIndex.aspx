@@ -12,16 +12,19 @@
         </div>
     </div>
 
-
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="card-body">
-                      
+               <asp:LinkButton ID="AddNewPatient" runat="server" CssClass="btn btn-primary btn-sm  col-md-1" PostBackUrl="~/Patient/PatientForm.aspx" ><i class="fa fa-edit"></i>Add</asp:LinkButton>
+                <br />
+                <br />                        
                 <div class="table-responsive-md">
                  
-                    <asp:GridView ID="PatientDataGrid" Width="100%" CssClass="table table-striped table-responsive-sm table-bordered table-hover" runat="server"  AutoGenerateColumns="False" DataKeyNames="patient_ID"  >
+
+                    <asp:GridView ID="PatientDataGrid" Width="100%" CssClass="table table-striped table-responsive-sm table-bordered table-hover" runat="server"  AutoGenerateColumns="False" DataKeyNames="patient_ID"  OnSelectedIndexChanged="PatientDataGrid_SelectedIndexChanged"  OnRowUpdating="PatientDataGrid_RowUpdating" OnRowDeleting="PatientDataGrid_RowDeleting" OnRowEditing="PatientDataGrid_RowEditing">
                         <Columns>
+                            
                             <asp:BoundField DataField="patient_ID" HeaderText="Token ID" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
                             <asp:BoundField DataField="patient_Name" HeaderText="Patient Name" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
                             <asp:BoundField DataField="patient_BirthDate" HeaderText="Date of Birth" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
@@ -29,26 +32,21 @@
                             <asp:BoundField DataField="patient_Phone" HeaderText="Phone" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
                             <asp:BoundField DataField="patient_Email" HeaderText="Email" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
                             <asp:BoundField DataField="patient_Address" HeaderText="Address" ItemStyle-CssClass="" HeaderStyle-CssClass="thead-light" />
-                        
-                            <asp:TemplateField>
-                              <HeaderTemplate>
-                                    <asp:LinkButton ID="AddNewPatient" runat="server" CssClass="btn btn-primary btn-sm" PostBackUrl="~/Patient/PatientForm.aspx"><i class="fa fa-edit"></i>Add</asp:LinkButton>
-                              </HeaderTemplate>
-                              <ItemTemplate>
+                             
+                            
+                             <asp:CommandField  HeaderText=""  ShowSelectButton="true" SelectText="<i class='fa fa-eye btn-sm rounded-circle rounded-circle ' style='color:black'></i>"  ShowDeleteButton="true" DeleteText="<i class='fa fa-trash btn-sm rounded-circle' style='color:red'></i>" />
+                          
 
-                                  <asp:LinkButton ID="DetailsPatient" runat="server" ToolTip="Patient Detail Info"  ForeColor="black" PostBackUrl="~/Patient/PatientDetails.aspx"><i class="fa fa-eye" aria-hidden="true"></i></asp:LinkButton>
-                             &nbsp &nbsp
-                                  <asp:LinkButton ID="DeletePatient" runat="server" ToolTip="Delete Patient"  ForeColor="red" PostBackUrl="#"><i class="fa fa-trash" aria-hidden="true"></i></asp:LinkButton>
-                              
-                              </ItemTemplate>
-                            </asp:TemplateField>
 
+                             
+                             
                         </Columns>
                     </asp:GridView>
                 </div>
 
 
-    <%--                  <asp:Table ID="PatientDataTable" runat="server" CssClass="data table table-striped table-responsive-sm no-margin">
+    <%--               
+                    <asp:Table ID="PatientDataTable" runat="server" CssClass="data table table-striped table-responsive-sm no-margin">
                         <asp:TableHeaderRow ID="PatientheaderRow" runat="server">
 
                             <asp:TableCell runat="server" Font-Bold="True" ToolTip="Token/ID of Patient">Token ID</asp:TableCell>
@@ -79,6 +77,7 @@
 
                         </asp:TableRow>
                   </asp:Table>--%>
+
 
                 </div>
             </div>

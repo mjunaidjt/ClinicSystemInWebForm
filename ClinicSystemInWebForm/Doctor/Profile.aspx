@@ -1,14 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/DoctorMaster.Master" AutoEventWireup="true" CodeBehind="DoctorProfile.aspx.cs" Inherits="ClinicSystemInWebForm.Doctor.DoctorProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="ClinicSystemInWebForm.Doctor.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="DoctorMainContent" runat="server">
-
-    
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+   
     <div class="row">
-    <div class="col-md-12col-sm-12 col-xs-12">
+    <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="card-title">
-                <h2>Profile </h2>
+                <h2 class="card-header">Profile </h2>
 <%--                <ul class="nav navbar-right panel_toolbox">
                     <li>
                        
@@ -18,13 +17,13 @@
          
             </div>
             <div class="card-body">
-                <div class="col-md-4 col-sm-4 col-xs-12 profile_left">
+                <div class="col-md-5 col-sm-5 col-xs-12 profile_left">
                     <div class="col-md-8 col-sm-5">
                         <div id="crop-avatar">
                             <asp:Image ID="DoctorProfileImg"  CssClass="img-fluid img-thumbnail"  runat="server" ImageUrl="~/content/profile.png" />
                         </div>
                     </div>
-                    <h3>Dr Unknown</h3>
+                    <h3>Dr Junaid</h3>
                     <ul class="list-unstyled user_data">
                         <li>
                             <i class="fa fa-briefcase user-profile-icon"></i> MBBS
@@ -35,7 +34,7 @@
                         <li>
                             <i class="fa fa-phone"></i> 0xxxxxxxxxx
                         </li>
-                        <li><i class="fa fa-inbox"></i>Abc@xyz.com</li>
+                        <li><i class="fa fa-inbox"></i>jd123@gmail.com</li>
 
                     </ul>
                     <!-- start skills -->
@@ -74,13 +73,13 @@
                             <%--            @foreach (var item in Model.Appointments)
                                         {--%>
                                             <tr>
-                                                <td>@item.Patient.Token</td>
-                                                <td>@item.Patient.Name</td>
-                                                <td>@item.Patient.Phone</td>
-                                                <td>@item.StartDateTime.ToString("MMM")-@item.StartDateTime.ToString("d ")-@item.StartDateTime.ToString("yyyy")</td>
-                                                <td>@item.StartDateTime.ToString("HH:mm")</td>
-                                                <td>@item.Detail</td>
-                                                <td><a href="@Url.Action("Details","Patients", new { id = item.Patient.Id})" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i>View</a></td>
+                                                <td>Patient Token</td>
+                                                <td>Patient Name </td>
+                                                <td>Phone Number</td>
+                                                <td> Date Area<%--@item.StartDateTime.ToString("MMM")-@item.StartDateTime.ToString("d ")-@item.StartDateTime.ToString("yyyy")--%></td>
+                                                <td><%--@item.StartDateTime.ToString("HH:mm")--%></td>
+                                                <td>appoinmnet details</td>
+                                                <td><%--<a href="@Url.Action("Details","Patients", new { id = item.Patient.Id})" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i>View</a>--%></td>
                                             </tr>
                                   <%--      }--%>
                                     </tbody>
@@ -95,7 +94,5 @@
         </div>
     </div>
 </div>
-    
-
+ 
 </asp:Content>
-

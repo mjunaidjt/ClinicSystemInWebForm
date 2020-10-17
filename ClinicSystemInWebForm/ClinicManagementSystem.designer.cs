@@ -22,7 +22,7 @@ namespace ClinicSystemInWebForm
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="CMS")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Clinic")]
 	public partial class ClinicManagementSystemDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,31 +30,31 @@ namespace ClinicSystemInWebForm
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertTBLAPPOINTMENT(TBLAPPOINTMENT instance);
-    partial void UpdateTBLAPPOINTMENT(TBLAPPOINTMENT instance);
-    partial void DeleteTBLAPPOINTMENT(TBLAPPOINTMENT instance);
     partial void InsertTBLDOCTOR(TBLDOCTOR instance);
     partial void UpdateTBLDOCTOR(TBLDOCTOR instance);
     partial void DeleteTBLDOCTOR(TBLDOCTOR instance);
     partial void InsertTBLFEEDBACK(TBLFEEDBACK instance);
     partial void UpdateTBLFEEDBACK(TBLFEEDBACK instance);
     partial void DeleteTBLFEEDBACK(TBLFEEDBACK instance);
+    partial void InsertTBLPATIENT(TBLPATIENT instance);
+    partial void UpdateTBLPATIENT(TBLPATIENT instance);
+    partial void DeleteTBLPATIENT(TBLPATIENT instance);
     partial void InsertTBLROLE(TBLROLE instance);
     partial void UpdateTBLROLE(TBLROLE instance);
     partial void DeleteTBLROLE(TBLROLE instance);
     partial void InsertTBLUSERROLE(TBLUSERROLE instance);
     partial void UpdateTBLUSERROLE(TBLUSERROLE instance);
     partial void DeleteTBLUSERROLE(TBLUSERROLE instance);
-    partial void InsertTBLPATIENT(TBLPATIENT instance);
-    partial void UpdateTBLPATIENT(TBLPATIENT instance);
-    partial void DeleteTBLPATIENT(TBLPATIENT instance);
     partial void InsertTBLUSER(TBLUSER instance);
     partial void UpdateTBLUSER(TBLUSER instance);
     partial void DeleteTBLUSER(TBLUSER instance);
+    partial void InsertTBLAPPOINTMENT(TBLAPPOINTMENT instance);
+    partial void UpdateTBLAPPOINTMENT(TBLAPPOINTMENT instance);
+    partial void DeleteTBLAPPOINTMENT(TBLAPPOINTMENT instance);
     #endregion
 		
 		public ClinicManagementSystemDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["CMSConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["ClinicConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -83,14 +83,6 @@ namespace ClinicSystemInWebForm
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<TBLAPPOINTMENT> TBLAPPOINTMENTs
-		{
-			get
-			{
-				return this.GetTable<TBLAPPOINTMENT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TBLDOCTOR> TBLDOCTORs
 		{
 			get
@@ -104,6 +96,14 @@ namespace ClinicSystemInWebForm
 			get
 			{
 				return this.GetTable<TBLFEEDBACK>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBLPATIENT> TBLPATIENTs
+		{
+			get
+			{
+				return this.GetTable<TBLPATIENT>();
 			}
 		}
 		
@@ -123,14 +123,6 @@ namespace ClinicSystemInWebForm
 			}
 		}
 		
-		public System.Data.Linq.Table<TBLPATIENT> TBLPATIENTs
-		{
-			get
-			{
-				return this.GetTable<TBLPATIENT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TBLUSER> TBLUSERs
 		{
 			get
@@ -138,273 +130,13 @@ namespace ClinicSystemInWebForm
 				return this.GetTable<TBLUSER>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLAPPOINTMENT")]
-	public partial class TBLAPPOINTMENT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _appoinment_ID;
-		
-		private int _appointment_DoctorID;
-		
-		private int _appointment_PatientID;
-		
-		private System.DateTime _appointment_Date;
-		
-		private string _appointment_Status;
-		
-		private EntitySet<TBLFEEDBACK> _TBLFEEDBACKs;
-		
-		private EntityRef<TBLDOCTOR> _TBLDOCTOR;
-		
-		private EntityRef<TBLPATIENT> _TBLPATIENT;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onappoinment_IDChanging(int value);
-    partial void Onappoinment_IDChanged();
-    partial void Onappointment_DoctorIDChanging(int value);
-    partial void Onappointment_DoctorIDChanged();
-    partial void Onappointment_PatientIDChanging(int value);
-    partial void Onappointment_PatientIDChanged();
-    partial void Onappointment_DateChanging(System.DateTime value);
-    partial void Onappointment_DateChanged();
-    partial void Onappointment_StatusChanging(string value);
-    partial void Onappointment_StatusChanged();
-    #endregion
-		
-		public TBLAPPOINTMENT()
-		{
-			this._TBLFEEDBACKs = new EntitySet<TBLFEEDBACK>(new Action<TBLFEEDBACK>(this.attach_TBLFEEDBACKs), new Action<TBLFEEDBACK>(this.detach_TBLFEEDBACKs));
-			this._TBLDOCTOR = default(EntityRef<TBLDOCTOR>);
-			this._TBLPATIENT = default(EntityRef<TBLPATIENT>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appoinment_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int appoinment_ID
+		public System.Data.Linq.Table<TBLAPPOINTMENT> TBLAPPOINTMENTs
 		{
 			get
 			{
-				return this._appoinment_ID;
+				return this.GetTable<TBLAPPOINTMENT>();
 			}
-			set
-			{
-				if ((this._appoinment_ID != value))
-				{
-					this.Onappoinment_IDChanging(value);
-					this.SendPropertyChanging();
-					this._appoinment_ID = value;
-					this.SendPropertyChanged("appoinment_ID");
-					this.Onappoinment_IDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_DoctorID", DbType="Int NOT NULL")]
-		public int appointment_DoctorID
-		{
-			get
-			{
-				return this._appointment_DoctorID;
-			}
-			set
-			{
-				if ((this._appointment_DoctorID != value))
-				{
-					if (this._TBLDOCTOR.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onappointment_DoctorIDChanging(value);
-					this.SendPropertyChanging();
-					this._appointment_DoctorID = value;
-					this.SendPropertyChanged("appointment_DoctorID");
-					this.Onappointment_DoctorIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_PatientID", DbType="Int NOT NULL")]
-		public int appointment_PatientID
-		{
-			get
-			{
-				return this._appointment_PatientID;
-			}
-			set
-			{
-				if ((this._appointment_PatientID != value))
-				{
-					if (this._TBLPATIENT.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onappointment_PatientIDChanging(value);
-					this.SendPropertyChanging();
-					this._appointment_PatientID = value;
-					this.SendPropertyChanged("appointment_PatientID");
-					this.Onappointment_PatientIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_Date", DbType="DateTime NOT NULL")]
-		public System.DateTime appointment_Date
-		{
-			get
-			{
-				return this._appointment_Date;
-			}
-			set
-			{
-				if ((this._appointment_Date != value))
-				{
-					this.Onappointment_DateChanging(value);
-					this.SendPropertyChanging();
-					this._appointment_Date = value;
-					this.SendPropertyChanged("appointment_Date");
-					this.Onappointment_DateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_Status", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string appointment_Status
-		{
-			get
-			{
-				return this._appointment_Status;
-			}
-			set
-			{
-				if ((this._appointment_Status != value))
-				{
-					this.Onappointment_StatusChanging(value);
-					this.SendPropertyChanging();
-					this._appointment_Status = value;
-					this.SendPropertyChanged("appointment_Status");
-					this.Onappointment_StatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLAPPOINTMENT_TBLFEEDBACK", Storage="_TBLFEEDBACKs", ThisKey="appoinment_ID", OtherKey="feedAppoinment_ID")]
-		public EntitySet<TBLFEEDBACK> TBLFEEDBACKs
-		{
-			get
-			{
-				return this._TBLFEEDBACKs;
-			}
-			set
-			{
-				this._TBLFEEDBACKs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLDOCTOR_TBLAPPOINTMENT", Storage="_TBLDOCTOR", ThisKey="appointment_DoctorID", OtherKey="doctor_ID", IsForeignKey=true)]
-		public TBLDOCTOR TBLDOCTOR
-		{
-			get
-			{
-				return this._TBLDOCTOR.Entity;
-			}
-			set
-			{
-				TBLDOCTOR previousValue = this._TBLDOCTOR.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLDOCTOR.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLDOCTOR.Entity = null;
-						previousValue.TBLAPPOINTMENTs.Remove(this);
-					}
-					this._TBLDOCTOR.Entity = value;
-					if ((value != null))
-					{
-						value.TBLAPPOINTMENTs.Add(this);
-						this._appointment_DoctorID = value.doctor_ID;
-					}
-					else
-					{
-						this._appointment_DoctorID = default(int);
-					}
-					this.SendPropertyChanged("TBLDOCTOR");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLPATIENT_TBLAPPOINTMENT", Storage="_TBLPATIENT", ThisKey="appointment_PatientID", OtherKey="patient_ID", IsForeignKey=true)]
-		public TBLPATIENT TBLPATIENT
-		{
-			get
-			{
-				return this._TBLPATIENT.Entity;
-			}
-			set
-			{
-				TBLPATIENT previousValue = this._TBLPATIENT.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLPATIENT.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLPATIENT.Entity = null;
-						previousValue.TBLAPPOINTMENTs.Remove(this);
-					}
-					this._TBLPATIENT.Entity = value;
-					if ((value != null))
-					{
-						value.TBLAPPOINTMENTs.Add(this);
-						this._appointment_PatientID = value.patient_ID;
-					}
-					else
-					{
-						this._appointment_PatientID = default(int);
-					}
-					this.SendPropertyChanged("TBLPATIENT");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBLFEEDBACKs(TBLFEEDBACK entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLAPPOINTMENT = this;
-		}
-		
-		private void detach_TBLFEEDBACKs(TBLFEEDBACK entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLAPPOINTMENT = null;
 		}
 	}
 	
@@ -889,312 +621,6 @@ namespace ClinicSystemInWebForm
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLROLES")]
-	public partial class TBLROLE : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _roleID;
-		
-		private string _roleName;
-		
-		private EntitySet<TBLUSERROLE> _TBLUSERROLEs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnroleIDChanging(int value);
-    partial void OnroleIDChanged();
-    partial void OnroleNameChanging(string value);
-    partial void OnroleNameChanged();
-    #endregion
-		
-		public TBLROLE()
-		{
-			this._TBLUSERROLEs = new EntitySet<TBLUSERROLE>(new Action<TBLUSERROLE>(this.attach_TBLUSERROLEs), new Action<TBLUSERROLE>(this.detach_TBLUSERROLEs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int roleID
-		{
-			get
-			{
-				return this._roleID;
-			}
-			set
-			{
-				if ((this._roleID != value))
-				{
-					this.OnroleIDChanging(value);
-					this.SendPropertyChanging();
-					this._roleID = value;
-					this.SendPropertyChanged("roleID");
-					this.OnroleIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleName", DbType="VarChar(50)")]
-		public string roleName
-		{
-			get
-			{
-				return this._roleName;
-			}
-			set
-			{
-				if ((this._roleName != value))
-				{
-					this.OnroleNameChanging(value);
-					this.SendPropertyChanging();
-					this._roleName = value;
-					this.SendPropertyChanged("roleName");
-					this.OnroleNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLROLE_TBLUSERROLE", Storage="_TBLUSERROLEs", ThisKey="roleID", OtherKey="roleID")]
-		public EntitySet<TBLUSERROLE> TBLUSERROLEs
-		{
-			get
-			{
-				return this._TBLUSERROLEs;
-			}
-			set
-			{
-				this._TBLUSERROLEs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TBLUSERROLEs(TBLUSERROLE entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLROLE = this;
-		}
-		
-		private void detach_TBLUSERROLEs(TBLUSERROLE entity)
-		{
-			this.SendPropertyChanging();
-			entity.TBLROLE = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLUSERROLE")]
-	public partial class TBLUSERROLE : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _roleID;
-		
-		private int _userID;
-		
-		private string _userRoleDesc;
-		
-		private EntityRef<TBLROLE> _TBLROLE;
-		
-		private EntityRef<TBLUSER> _TBLUSER;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnroleIDChanging(int value);
-    partial void OnroleIDChanged();
-    partial void OnuserIDChanging(int value);
-    partial void OnuserIDChanged();
-    partial void OnuserRoleDescChanging(string value);
-    partial void OnuserRoleDescChanged();
-    #endregion
-		
-		public TBLUSERROLE()
-		{
-			this._TBLROLE = default(EntityRef<TBLROLE>);
-			this._TBLUSER = default(EntityRef<TBLUSER>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int roleID
-		{
-			get
-			{
-				return this._roleID;
-			}
-			set
-			{
-				if ((this._roleID != value))
-				{
-					if (this._TBLROLE.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnroleIDChanging(value);
-					this.SendPropertyChanging();
-					this._roleID = value;
-					this.SendPropertyChanged("roleID");
-					this.OnroleIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int userID
-		{
-			get
-			{
-				return this._userID;
-			}
-			set
-			{
-				if ((this._userID != value))
-				{
-					if (this._TBLUSER.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnuserIDChanging(value);
-					this.SendPropertyChanging();
-					this._userID = value;
-					this.SendPropertyChanged("userID");
-					this.OnuserIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userRoleDesc", DbType="VarChar(255)")]
-		public string userRoleDesc
-		{
-			get
-			{
-				return this._userRoleDesc;
-			}
-			set
-			{
-				if ((this._userRoleDesc != value))
-				{
-					this.OnuserRoleDescChanging(value);
-					this.SendPropertyChanging();
-					this._userRoleDesc = value;
-					this.SendPropertyChanged("userRoleDesc");
-					this.OnuserRoleDescChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLROLE_TBLUSERROLE", Storage="_TBLROLE", ThisKey="roleID", OtherKey="roleID", IsForeignKey=true)]
-		public TBLROLE TBLROLE
-		{
-			get
-			{
-				return this._TBLROLE.Entity;
-			}
-			set
-			{
-				TBLROLE previousValue = this._TBLROLE.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLROLE.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLROLE.Entity = null;
-						previousValue.TBLUSERROLEs.Remove(this);
-					}
-					this._TBLROLE.Entity = value;
-					if ((value != null))
-					{
-						value.TBLUSERROLEs.Add(this);
-						this._roleID = value.roleID;
-					}
-					else
-					{
-						this._roleID = default(int);
-					}
-					this.SendPropertyChanged("TBLROLE");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLUSER_TBLUSERROLE", Storage="_TBLUSER", ThisKey="userID", OtherKey="userID", IsForeignKey=true)]
-		public TBLUSER TBLUSER
-		{
-			get
-			{
-				return this._TBLUSER.Entity;
-			}
-			set
-			{
-				TBLUSER previousValue = this._TBLUSER.Entity;
-				if (((previousValue != value) 
-							|| (this._TBLUSER.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TBLUSER.Entity = null;
-						previousValue.TBLUSERROLEs.Remove(this);
-					}
-					this._TBLUSER.Entity = value;
-					if ((value != null))
-					{
-						value.TBLUSERROLEs.Add(this);
-						this._userID = value.userID;
-					}
-					else
-					{
-						this._userID = default(int);
-					}
-					this.SendPropertyChanged("TBLUSER");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLPATIENT")]
 	public partial class TBLPATIENT : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1477,6 +903,312 @@ namespace ClinicSystemInWebForm
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLROLES")]
+	public partial class TBLROLE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _roleID;
+		
+		private string _roleName;
+		
+		private EntitySet<TBLUSERROLE> _TBLUSERROLEs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnroleIDChanging(int value);
+    partial void OnroleIDChanged();
+    partial void OnroleNameChanging(string value);
+    partial void OnroleNameChanged();
+    #endregion
+		
+		public TBLROLE()
+		{
+			this._TBLUSERROLEs = new EntitySet<TBLUSERROLE>(new Action<TBLUSERROLE>(this.attach_TBLUSERROLEs), new Action<TBLUSERROLE>(this.detach_TBLUSERROLEs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int roleID
+		{
+			get
+			{
+				return this._roleID;
+			}
+			set
+			{
+				if ((this._roleID != value))
+				{
+					this.OnroleIDChanging(value);
+					this.SendPropertyChanging();
+					this._roleID = value;
+					this.SendPropertyChanged("roleID");
+					this.OnroleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleName", DbType="VarChar(50)")]
+		public string roleName
+		{
+			get
+			{
+				return this._roleName;
+			}
+			set
+			{
+				if ((this._roleName != value))
+				{
+					this.OnroleNameChanging(value);
+					this.SendPropertyChanging();
+					this._roleName = value;
+					this.SendPropertyChanged("roleName");
+					this.OnroleNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLROLE_TBLUSERROLE", Storage="_TBLUSERROLEs", ThisKey="roleID", OtherKey="roleID")]
+		public EntitySet<TBLUSERROLE> TBLUSERROLEs
+		{
+			get
+			{
+				return this._TBLUSERROLEs;
+			}
+			set
+			{
+				this._TBLUSERROLEs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TBLUSERROLEs(TBLUSERROLE entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLROLE = this;
+		}
+		
+		private void detach_TBLUSERROLEs(TBLUSERROLE entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLROLE = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLUSERROLE")]
+	public partial class TBLUSERROLE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _userID;
+		
+		private int _roleID;
+		
+		private string _userRoleDesc;
+		
+		private EntityRef<TBLROLE> _TBLROLE;
+		
+		private EntityRef<TBLUSER> _TBLUSER;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnuserIDChanging(int value);
+    partial void OnuserIDChanged();
+    partial void OnroleIDChanging(int value);
+    partial void OnroleIDChanged();
+    partial void OnuserRoleDescChanging(string value);
+    partial void OnuserRoleDescChanged();
+    #endregion
+		
+		public TBLUSERROLE()
+		{
+			this._TBLROLE = default(EntityRef<TBLROLE>);
+			this._TBLUSER = default(EntityRef<TBLUSER>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int userID
+		{
+			get
+			{
+				return this._userID;
+			}
+			set
+			{
+				if ((this._userID != value))
+				{
+					if (this._TBLUSER.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuserIDChanging(value);
+					this.SendPropertyChanging();
+					this._userID = value;
+					this.SendPropertyChanged("userID");
+					this.OnuserIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_roleID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int roleID
+		{
+			get
+			{
+				return this._roleID;
+			}
+			set
+			{
+				if ((this._roleID != value))
+				{
+					if (this._TBLROLE.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnroleIDChanging(value);
+					this.SendPropertyChanging();
+					this._roleID = value;
+					this.SendPropertyChanged("roleID");
+					this.OnroleIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_userRoleDesc", DbType="VarChar(255)")]
+		public string userRoleDesc
+		{
+			get
+			{
+				return this._userRoleDesc;
+			}
+			set
+			{
+				if ((this._userRoleDesc != value))
+				{
+					this.OnuserRoleDescChanging(value);
+					this.SendPropertyChanging();
+					this._userRoleDesc = value;
+					this.SendPropertyChanged("userRoleDesc");
+					this.OnuserRoleDescChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLROLE_TBLUSERROLE", Storage="_TBLROLE", ThisKey="roleID", OtherKey="roleID", IsForeignKey=true)]
+		public TBLROLE TBLROLE
+		{
+			get
+			{
+				return this._TBLROLE.Entity;
+			}
+			set
+			{
+				TBLROLE previousValue = this._TBLROLE.Entity;
+				if (((previousValue != value) 
+							|| (this._TBLROLE.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TBLROLE.Entity = null;
+						previousValue.TBLUSERROLEs.Remove(this);
+					}
+					this._TBLROLE.Entity = value;
+					if ((value != null))
+					{
+						value.TBLUSERROLEs.Add(this);
+						this._roleID = value.roleID;
+					}
+					else
+					{
+						this._roleID = default(int);
+					}
+					this.SendPropertyChanged("TBLROLE");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLUSER_TBLUSERROLE", Storage="_TBLUSER", ThisKey="userID", OtherKey="userID", IsForeignKey=true)]
+		public TBLUSER TBLUSER
+		{
+			get
+			{
+				return this._TBLUSER.Entity;
+			}
+			set
+			{
+				TBLUSER previousValue = this._TBLUSER.Entity;
+				if (((previousValue != value) 
+							|| (this._TBLUSER.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TBLUSER.Entity = null;
+						previousValue.TBLUSERROLEs.Remove(this);
+					}
+					this._TBLUSER.Entity = value;
+					if ((value != null))
+					{
+						value.TBLUSERROLEs.Add(this);
+						this._userID = value.userID;
+					}
+					else
+					{
+						this._userID = default(int);
+					}
+					this.SendPropertyChanged("TBLUSER");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLUSERS")]
 	public partial class TBLUSER : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1684,6 +1416,298 @@ namespace ClinicSystemInWebForm
 		{
 			this.SendPropertyChanging();
 			entity.TBLUSER = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBLAPPOINTMENT")]
+	public partial class TBLAPPOINTMENT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _appoinment_ID;
+		
+		private int _appointment_DoctorID;
+		
+		private int _appointment_PatientID;
+		
+		private string _appointment_Date;
+		
+		private string _appoinment_Details;
+		
+		private string _appointment_Status;
+		
+		private EntitySet<TBLFEEDBACK> _TBLFEEDBACKs;
+		
+		private EntityRef<TBLDOCTOR> _TBLDOCTOR;
+		
+		private EntityRef<TBLPATIENT> _TBLPATIENT;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onappoinment_IDChanging(int value);
+    partial void Onappoinment_IDChanged();
+    partial void Onappointment_DoctorIDChanging(int value);
+    partial void Onappointment_DoctorIDChanged();
+    partial void Onappointment_PatientIDChanging(int value);
+    partial void Onappointment_PatientIDChanged();
+    partial void Onappointment_DateChanging(string value);
+    partial void Onappointment_DateChanged();
+    partial void Onappoinment_DetailsChanging(string value);
+    partial void Onappoinment_DetailsChanged();
+    partial void Onappointment_StatusChanging(string value);
+    partial void Onappointment_StatusChanged();
+    #endregion
+		
+		public TBLAPPOINTMENT()
+		{
+			this._TBLFEEDBACKs = new EntitySet<TBLFEEDBACK>(new Action<TBLFEEDBACK>(this.attach_TBLFEEDBACKs), new Action<TBLFEEDBACK>(this.detach_TBLFEEDBACKs));
+			this._TBLDOCTOR = default(EntityRef<TBLDOCTOR>);
+			this._TBLPATIENT = default(EntityRef<TBLPATIENT>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appoinment_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int appoinment_ID
+		{
+			get
+			{
+				return this._appoinment_ID;
+			}
+			set
+			{
+				if ((this._appoinment_ID != value))
+				{
+					this.Onappoinment_IDChanging(value);
+					this.SendPropertyChanging();
+					this._appoinment_ID = value;
+					this.SendPropertyChanged("appoinment_ID");
+					this.Onappoinment_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_DoctorID", DbType="Int NOT NULL")]
+		public int appointment_DoctorID
+		{
+			get
+			{
+				return this._appointment_DoctorID;
+			}
+			set
+			{
+				if ((this._appointment_DoctorID != value))
+				{
+					if (this._TBLDOCTOR.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onappointment_DoctorIDChanging(value);
+					this.SendPropertyChanging();
+					this._appointment_DoctorID = value;
+					this.SendPropertyChanged("appointment_DoctorID");
+					this.Onappointment_DoctorIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_PatientID", DbType="Int NOT NULL")]
+		public int appointment_PatientID
+		{
+			get
+			{
+				return this._appointment_PatientID;
+			}
+			set
+			{
+				if ((this._appointment_PatientID != value))
+				{
+					if (this._TBLPATIENT.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onappointment_PatientIDChanging(value);
+					this.SendPropertyChanging();
+					this._appointment_PatientID = value;
+					this.SendPropertyChanged("appointment_PatientID");
+					this.Onappointment_PatientIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_Date", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string appointment_Date
+		{
+			get
+			{
+				return this._appointment_Date;
+			}
+			set
+			{
+				if ((this._appointment_Date != value))
+				{
+					this.Onappointment_DateChanging(value);
+					this.SendPropertyChanging();
+					this._appointment_Date = value;
+					this.SendPropertyChanged("appointment_Date");
+					this.Onappointment_DateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appoinment_Details", DbType="VarChar(100)")]
+		public string appoinment_Details
+		{
+			get
+			{
+				return this._appoinment_Details;
+			}
+			set
+			{
+				if ((this._appoinment_Details != value))
+				{
+					this.Onappoinment_DetailsChanging(value);
+					this.SendPropertyChanging();
+					this._appoinment_Details = value;
+					this.SendPropertyChanged("appoinment_Details");
+					this.Onappoinment_DetailsChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_appointment_Status", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string appointment_Status
+		{
+			get
+			{
+				return this._appointment_Status;
+			}
+			set
+			{
+				if ((this._appointment_Status != value))
+				{
+					this.Onappointment_StatusChanging(value);
+					this.SendPropertyChanging();
+					this._appointment_Status = value;
+					this.SendPropertyChanged("appointment_Status");
+					this.Onappointment_StatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLAPPOINTMENT_TBLFEEDBACK", Storage="_TBLFEEDBACKs", ThisKey="appoinment_ID", OtherKey="feedAppoinment_ID")]
+		public EntitySet<TBLFEEDBACK> TBLFEEDBACKs
+		{
+			get
+			{
+				return this._TBLFEEDBACKs;
+			}
+			set
+			{
+				this._TBLFEEDBACKs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLDOCTOR_TBLAPPOINTMENT", Storage="_TBLDOCTOR", ThisKey="appointment_DoctorID", OtherKey="doctor_ID", IsForeignKey=true)]
+		public TBLDOCTOR TBLDOCTOR
+		{
+			get
+			{
+				return this._TBLDOCTOR.Entity;
+			}
+			set
+			{
+				TBLDOCTOR previousValue = this._TBLDOCTOR.Entity;
+				if (((previousValue != value) 
+							|| (this._TBLDOCTOR.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TBLDOCTOR.Entity = null;
+						previousValue.TBLAPPOINTMENTs.Remove(this);
+					}
+					this._TBLDOCTOR.Entity = value;
+					if ((value != null))
+					{
+						value.TBLAPPOINTMENTs.Add(this);
+						this._appointment_DoctorID = value.doctor_ID;
+					}
+					else
+					{
+						this._appointment_DoctorID = default(int);
+					}
+					this.SendPropertyChanged("TBLDOCTOR");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TBLPATIENT_TBLAPPOINTMENT", Storage="_TBLPATIENT", ThisKey="appointment_PatientID", OtherKey="patient_ID", IsForeignKey=true)]
+		public TBLPATIENT TBLPATIENT
+		{
+			get
+			{
+				return this._TBLPATIENT.Entity;
+			}
+			set
+			{
+				TBLPATIENT previousValue = this._TBLPATIENT.Entity;
+				if (((previousValue != value) 
+							|| (this._TBLPATIENT.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TBLPATIENT.Entity = null;
+						previousValue.TBLAPPOINTMENTs.Remove(this);
+					}
+					this._TBLPATIENT.Entity = value;
+					if ((value != null))
+					{
+						value.TBLAPPOINTMENTs.Add(this);
+						this._appointment_PatientID = value.patient_ID;
+					}
+					else
+					{
+						this._appointment_PatientID = default(int);
+					}
+					this.SendPropertyChanged("TBLPATIENT");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TBLFEEDBACKs(TBLFEEDBACK entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLAPPOINTMENT = this;
+		}
+		
+		private void detach_TBLFEEDBACKs(TBLFEEDBACK entity)
+		{
+			this.SendPropertyChanging();
+			entity.TBLAPPOINTMENT = null;
 		}
 	}
 }

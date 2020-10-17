@@ -11,7 +11,7 @@ namespace ClinicSystemInWebForm.Doctor
 {
 
 
-    public partial class DoctorProfile
+    public partial class Profile
     {
 
         /// <summary>

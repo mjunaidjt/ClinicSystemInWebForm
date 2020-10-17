@@ -19,8 +19,7 @@
                         <asp:Label ID="AppointmentDoctorLabel" runat="server" Text="Doctor" CssClass="control-label col-md-2 col-sm-2 col-xs-12"></asp:Label>
                            <asp:DropDownList ID="AppointmentDoctorList" runat="server" CssClass="form-control  col-md-9 col-sm-9 col-xs-12">
                                <asp:ListItem Selected="True">Select Doctor</asp:ListItem>
-                               <asp:ListItem>Umme Habiba</asp:ListItem>
-                               <asp:ListItem>Muhammad Junaid</asp:ListItem>
+                            
                             </asp:DropDownList>
                                     <%--RequiredFieldValidator--%>
                             <asp:RequiredFieldValidator ID="AppointmentDoctorList_Validator" runat="server" ControlToValidate="AppointmentDoctorList" InitialValue="Select Doctor"  ErrorMessage="Required"   
@@ -38,24 +37,23 @@
                 <div class="x_content card-body">
                     <div id="divPatientAppointments" class="">
                    
-                        <asp:Table ID="PatientAppointments" runat="server" CssClass="table table-striped table-hover">
-                            <asp:TableRow runat="server" CssClass="thead-dark">
-                                <asp:TableHeaderCell>Patient Name</asp:TableHeaderCell>
-                                <asp:TableHeaderCell>Date</asp:TableHeaderCell>
-                                <asp:TableHeaderCell>Time</asp:TableHeaderCell>
+            
+                 <div class="table-responsive">
 
-                            </asp:TableRow>
-                            <asp:TableRow runat="server">
-                                    <asp:TableCell runat="server">Muhammad Junaid Tariq</asp:TableCell>
-                                    <asp:TableCell runat="server">13 Feb 1999</asp:TableCell>
-                                    <asp:TableCell runat="server">12:30</asp:TableCell>
-                           </asp:TableRow>
-                           <asp:TableRow runat="server">
-                                    <asp:TableCell runat="server">Muhammad Numan Tariq</asp:TableCell>
-                                    <asp:TableCell runat="server">30 May 2020</asp:TableCell>
-                                    <asp:TableCell runat="server">9:30</asp:TableCell>
-                            </asp:TableRow>
-                        </asp:Table>
+                   <asp:GridView ID="patientAppointmentGrid"  runat="server" Width="100%" CssClass="table table-striped table-bordered " AutoGenerateColumns="false" DataKeyNames="appoinment_ID">                       
+                        <Columns>
+
+                            <asp:BoundField DataField="patient_Name" HeaderText="Patient" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="appointment_Date" HeaderText="Date Time" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="doctor_Name" HeaderText="Appointed Dr" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="appoinment_Details" HeaderText="Details"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            
+                        </Columns>
+                        
+                    </asp:GridView>
+
+                </div>
+
 
                     </div>
                 </div>
@@ -100,8 +98,8 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-6">
-                            <asp:HyperLink ID="AppointmentBack_Button" runat="server" CssClass="btn btn-primary" NavigateUrl="~/Patient/PatientIndex.aspx" ToolTip="Go Back to Patient">Back</asp:HyperLink>
-                            <button type="submit" class="btn btn-success">Save</button>
+                           <asp:HyperLink ID="AppointmentBack_Button" runat="server" CssClass="btn btn-primary" NavigateUrl="~/Patient/PatientIndex.aspx" ToolTip="Go Back to Patient">Back</asp:HyperLink>
+                           <asp:Button ID="SaveAppointment" runat="server"  CssClass="btn btn-success" Text="Save" OnClick="SaveAppointment_Click" />
                         </div>
                     </div>
                 </div>

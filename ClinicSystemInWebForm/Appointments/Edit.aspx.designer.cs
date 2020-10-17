@@ -42,60 +42,6 @@ namespace ClinicSystemInWebForm.Appointments
         protected global::System.Web.UI.WebControls.RequiredFieldValidator EditAppointmentDDRFValidator;
 
         /// <summary>
-        /// EditAppointmentDateL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditAppointmentDateL;
-
-        /// <summary>
-        /// EditAppointmentDateTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EditAppointmentDateTB;
-
-        /// <summary>
-        /// EditApDateTBRFValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator EditApDateTBRFValidator;
-
-        /// <summary>
-        /// EditAppointmentTimeL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EditAppointmentTimeL;
-
-        /// <summary>
-        /// EditAppointmentTimeTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EditAppointmentTimeTB;
-
-        /// <summary>
-        /// EditAppTimeTBRFValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator EditAppTimeTBRFValidator;
-
-        /// <summary>
         /// EditAppointmentDetailsL control.
         /// </summary>
         /// <remarks>

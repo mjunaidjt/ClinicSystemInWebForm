@@ -15,30 +15,30 @@ namespace ClinicSystemInWebForm.Reports
     {
 
         /// <summary>
+        /// patientToken control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox patientToken;
+
+        /// <summary>
+        /// patientTokenBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button patientTokenBtn;
+
+        /// <summary>
         /// AttendenceReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table AttendenceReport;
-
-        /// <summary>
-        /// AttendenceReportHeaderR control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderRow AttendenceReportHeaderR;
-
-        /// <summary>
-        /// AttendenceReportData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow AttendenceReportData;
+        protected global::System.Web.UI.WebControls.GridView AttendenceReport;
     }
 }

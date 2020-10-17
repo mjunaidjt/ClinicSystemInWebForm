@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -79,11 +83,13 @@
     <Content Include="Attendence\CreateAttendence.aspx" />
     <Content Include="content\login.png" />
     <Content Include="content\loginI.png" />
+    <Content Include="content\logo.png" />
     <Content Include="content\profile.png" />
     <Content Include="content\userImage.png" />
+    <Content Include="Doctor\Details.aspx" />
     <Content Include="Doctor\DoctorIndex.aspx" />
-    <Content Include="Doctor\DoctorProfile.aspx" />
     <Content Include="Doctor\Edit.aspx" />
+    <Content Include="Doctor\Profile.aspx" />
     <Content Include="Home\HomeIndex.aspx" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.css" />
     <Content Include="lib\bootstrap\css\bootstrap-grid.min.css" />
@@ -134,8 +140,10 @@
     <Content Include="Patient\PatientForm.aspx" />
     <Content Include="Patient\PatientIndex.aspx" />
     <Content Include="LoginStyle.css" />
+    <Content Include="Reports\AppoinmentCrystalReport.aspx" />
     <Content Include="Reports\AppointmentReport.aspx" />
     <Content Include="Reports\AttendenceR.aspx" />
+    <Content Include="Reports\FeedbackCrystalReport.aspx" />
     <Content Include="Shared\AttendenceForm.aspx" />
     <Content Include="simple-sidebar.css" />
     <Content Include="Web.config" />
@@ -169,6 +177,11 @@
     </Compile>
     <Compile Include="AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AppoinmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppoinmentDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Appointments\AppointmentIndex.aspx.cs">
       <DependentUpon>AppointmentIndex.aspx</DependentUpon>
@@ -212,8 +225,12 @@
     <Compile Include="Attendence\CreateAttendence.aspx.designer.cs">
       <DependentUpon>CreateAttendence.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ClinicManagementSystem.cs">
-      <DependentUpon>ClinicManagementSystem.dbml</DependentUpon>
+    <Compile Include="Clinic.master.cs">
+      <DependentUpon>Clinic.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clinic.master.designer.cs">
+      <DependentUpon>Clinic.master</DependentUpon>
     </Compile>
     <Compile Include="ClinicManagementSystem.designer.cs">
       <AutoGen>True</AutoGen>
@@ -227,12 +244,12 @@
     <Compile Include="Default.Master.designer.cs">
       <DependentUpon>Default.Master</DependentUpon>
     </Compile>
-    <Compile Include="DoctorMaster.Master.cs">
-      <DependentUpon>DoctorMaster.Master</DependentUpon>
+    <Compile Include="Doctor\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DoctorMaster.Master.designer.cs">
-      <DependentUpon>DoctorMaster.Master</DependentUpon>
+    <Compile Include="Doctor\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Doctor\DoctorIndex.aspx.cs">
       <DependentUpon>DoctorIndex.aspx</DependentUpon>
@@ -241,19 +258,24 @@
     <Compile Include="Doctor\DoctorIndex.aspx.designer.cs">
       <DependentUpon>DoctorIndex.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Doctor\DoctorProfile.aspx.cs">
-      <DependentUpon>DoctorProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Doctor\DoctorProfile.aspx.designer.cs">
-      <DependentUpon>DoctorProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Doctor\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Doctor\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Doctor\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedbackDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FeedbackDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Home\HomeIndex.aspx.cs">
       <DependentUpon>HomeIndex.aspx</DependentUpon>
@@ -284,6 +306,13 @@
       <DependentUpon>PatientIndex.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AppoinmentCrystalReport.aspx.cs">
+      <DependentUpon>AppoinmentCrystalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\AppoinmentCrystalReport.aspx.designer.cs">
+      <DependentUpon>AppoinmentCrystalReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\AppointmentReport.aspx.cs">
       <DependentUpon>AppointmentReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +326,25 @@
     </Compile>
     <Compile Include="Reports\AttendenceR.aspx.designer.cs">
       <DependentUpon>AttendenceR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CrystalReportOfAppoinment.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportOfAppoinment.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReportOfFeedback.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportOfFeedback.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FeedbackCrystalReport.aspx.cs">
+      <DependentUpon>FeedbackCrystalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\FeedbackCrystalReport.aspx.designer.cs">
+      <DependentUpon>FeedbackCrystalReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shared\AttendenceForm.aspx.cs">
       <DependentUpon>AttendenceForm.aspx</DependentUpon>
@@ -338,16 +386,38 @@
     <Content Include="lib\font-awesome\webfonts\fa-solid-900.ttf" />
     <Content Include="lib\font-awesome\webfonts\fa-solid-900.woff" />
     <Content Include="lib\font-awesome\webfonts\fa-solid-900.woff2" />
-    <Content Include="DoctorMaster.Master" />
+    <Content Include="Clinic.master" />
+    <Content Include="Default.Master" />
     <Content Include="ClinicManagementSystem.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>ClinicManagementSystem.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="AppoinmentDataSet.xsc">
+      <DependentUpon>AppoinmentDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="AppoinmentDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppoinmentDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="AppoinmentDataSet.xss">
+      <DependentUpon>AppoinmentDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="ClinicManagementSystem.dbml.layout">
       <DependentUpon>ClinicManagementSystem.dbml</DependentUpon>
     </None>
-    <Content Include="Default.Master" />
+    <Content Include="FeedbackDataSet.xsc">
+      <DependentUpon>FeedbackDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="FeedbackDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FeedbackDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="FeedbackDataSet.xss">
+      <DependentUpon>FeedbackDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -358,6 +428,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\CrystalReportOfAppoinment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportOfAppoinment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReportOfFeedback.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportOfFeedback.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

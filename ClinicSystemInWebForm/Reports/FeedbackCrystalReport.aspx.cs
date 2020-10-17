@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ClinicSystemInWebForm.Doctor
+namespace ClinicSystemInWebForm.Reports
 {
-    public partial class DoctorProfile : System.Web.UI.Page
+    public partial class FeedbackCrystalReport : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

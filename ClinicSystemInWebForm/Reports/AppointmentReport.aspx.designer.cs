@@ -15,6 +15,24 @@ namespace ClinicSystemInWebForm.Reports
     {
 
         /// <summary>
+        /// SelectStatusL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SelectStatusL;
+
+        /// <summary>
+        /// DropDownStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownStatus;
+
+        /// <summary>
         /// DocReportL control.
         /// </summary>
         /// <remarks>
@@ -33,30 +51,21 @@ namespace ClinicSystemInWebForm.Reports
         protected global::System.Web.UI.WebControls.TextBox DocReportTB;
 
         /// <summary>
-        /// appointmentsReport control.
+        /// Submit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table appointmentsReport;
+        protected global::System.Web.UI.WebControls.Button Submit;
 
         /// <summary>
-        /// appointmentsReportHeader control.
+        /// AppointmentsReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableHeaderRow appointmentsReportHeader;
-
-        /// <summary>
-        /// appointmentsReportData control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow appointmentsReportData;
+        protected global::System.Web.UI.WebControls.GridView AppointmentsReport;
     }
 }

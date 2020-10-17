@@ -42,6 +42,15 @@ namespace ClinicSystemInWebForm
         protected global::System.Web.UI.WebControls.HyperLink DashboardLink;
 
         /// <summary>
+        /// ProfileLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ProfileLink;
+
+        /// <summary>
         /// PatientLink control.
         /// </summary>
         /// <remarks>
@@ -78,6 +87,24 @@ namespace ClinicSystemInWebForm
         protected global::System.Web.UI.WebControls.HyperLink UserLink;
 
         /// <summary>
+        /// AppoinmentReportLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink AppoinmentReportLink;
+
+        /// <summary>
+        /// AttendenceReportLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink AttendenceReportLink;
+
+        /// <summary>
         /// ReportsLink control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,24 @@ namespace ClinicSystemInWebForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink ReportsLink;
+
+        /// <summary>
+        /// AppointmentsReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink AppointmentsReport;
+
+        /// <summary>
+        /// AttendencesReport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink AttendencesReport;
 
         /// <summary>
         /// userprofilehyperlink control.

@@ -12,9 +12,11 @@
                 <div class="well" style="overflow: auto">
                     <div class="col-md-6">
                         <div id="">
-                            <label>Enter Patient Token: </label>
-                            <input type="text" name="token" />
-                            <input type="button" class="btn btn-primary btn-sm" value="Ok" id="submit" />
+                            <label class="col-md-12 col-sm-12">Enter Patient Token: </label>
+                            <asp:TextBox ID="patientToken" CssClass="form-control" runat="server"></asp:TextBox>
+                            <br />
+                            <br />
+                            <asp:Button ID="patientTokenBtn" CssClass="btn btn-primary btn-sm" runat="server" Text="Search" OnClick="patientTokenBtn_Click" />
                         </div>
 
                     </div>
@@ -34,36 +36,32 @@
                 <div class="col-md-12">
     <div class="modal-content">
         <div class="modal-header">
-            <h4 class="x_title">Attandences</h4>
+            <h4 class="x_title">Feedback</h4>
                <button type="button" class="close" data-dismiss="modal">
                 <i class="fa fa-times" aria-hidden="true" style="color:red"></i>
-            </button>
+              </button>
         </div>
 
         <div class="modal-body">
 
-            <asp:Table ID="AttendenceReport" runat="server" CssClass="table table-striped table-bordered dataTable">
-                <asp:TableHeaderRow   ID="AttendenceReportHeaderR" runat="server" Font-Bold="True">
+            <div class="table-responsive">
 
-                    <asp:TableCell runat="server">Remarks</asp:TableCell>
-                    <asp:TableCell runat="server">Diagnosis</asp:TableCell>
-                    <asp:TableCell runat="server">Prescription</asp:TableCell>
-                    <asp:TableCell runat="server">Date</asp:TableCell>
+                   <asp:GridView ID="AttendenceReport"  runat="server" Width="100%" CssClass="table table-striped table-bordered" AutoGenerateColumns="false" DataKeyNames="feedback_ID">                       
+                      
+                       <Columns> 
+                            
+                            <asp:BoundField DataField="feedback_Remarks" HeaderText="Remarks" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="feedback_Dignosis" HeaderText="Dignosis" HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <asp:BoundField DataField="feedback_Presciption" HeaderText="Prescription"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />
+                            <%--<asp:BoundField DataField="feedback_DateTime" HeaderText="Date Time"  HeaderStyle-CssClass="thead-dark" ItemStyle-CssClass=""  />--%>
+                                    
+                        </Columns>
+                        
+                    </asp:GridView>
 
-                </asp:TableHeaderRow>
-                <asp:TableRow ID="AttendenceReportData" runat="server">
-
-                    <asp:TableCell runat="server">Abc Remarks </asp:TableCell>
-                    <asp:TableCell runat="server">Abc Diagnosis</asp:TableCell>
-                    <asp:TableCell runat="server">Prescription details ABC</asp:TableCell>
-                    <asp:TableCell runat="server">Feb 13 2020</asp:TableCell>
-
-                </asp:TableRow>
-            </asp:Table>
-
-
-
-        </div>>
+                </div>
+          
+        </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
